@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwpfqk5b815vu"]
+
+[ext_resource type="Script" uid="uid://b60roc5ibrm5y" path="res://minigame.gd" id="1_8t7wd"]
+
+[node name="Minigame" type="Node2D"]
+script = ExtResource("1_8t7wd")
+
+[node name="WaveLine" type="Line2D" parent="."]
+position = Vector2(592, 593)
+points = PackedVector2Array(-3, 3)
+
+[node name="knob1" type="HSlider" parent="."]
+offset_left = 711.0
+offset_top = 779.0
+offset_right = 1213.0
+offset_bottom = 795.0
+
+[node name="knob2" type="HSlider" parent="."]
+offset_left = 711.0
+offset_top = 806.0
+offset_right = 1213.0
+offset_bottom = 822.0
+
+[node name="knob3" type="HSlider" parent="."]
+offset_left = 711.0
+offset_top = 832.0
+offset_right = 1213.0
+offset_bottom = 848.0
+
+[connection signal="value_changed" from="knob1" to="." method="_on_knob_1_value_changed"]
+[connection signal="value_changed" from="knob2" to="." method="_on_knob_2_value_changed"]
+[connection signal="value_changed" from="knob3" to="." method="_on_knob_3_value_changed"]

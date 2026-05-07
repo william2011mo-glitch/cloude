@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://boaqs1fnqppct"]
+
+[ext_resource type="Script" uid="uid://cqqogntnfutsf" path="res://code_input.gd" id="1_fpdk7"]
+
+[node name="ErrorGame" type="Node2D"]
+
+[node name="CodeInput" type="LineEdit" parent="."]
+offset_left = 848.0
+offset_top = 353.0
+offset_right = 1060.0
+offset_bottom = 418.0
+placeholder_text = "Ender code"
+alignment = 1
+script = ExtResource("1_fpdk7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 748.0
+offset_top = 533.0
+offset_right = 1157.0
+offset_bottom = 676.0
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="text_submitted" from="CodeInput" to="CodeInput" method="_on_text_submitted"]
