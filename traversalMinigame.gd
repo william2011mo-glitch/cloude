@@ -71,7 +71,7 @@ func build_ui():
 
 	code_input = TextEdit.new()
 	code_input.custom_minimum_size = Vector2(0, 260)
-	code_input.placeholder_text = "e.g.\nfor (int i = 0; i < list.size(); i++) {\n    if (list.get(i).equals(findMe)) {\n        list.set(i, replaceWith);\n    }\n}"
+	code_input.placeholder_text = "e.g. HelloWorld(print)"
 	vbox.add_child(code_input)
 
 	# Buttons
