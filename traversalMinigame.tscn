@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba2tn5jo7jl3s"]
+
+[ext_resource type="Script" uid="uid://c7ui8fm6igyw8" path="res://traversalMinigame.gd" id="1_g6vk7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g6vk7")
