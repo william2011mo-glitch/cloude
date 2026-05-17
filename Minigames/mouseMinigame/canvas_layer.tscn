@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk6c477pd0rgi"]
+
+[ext_resource type="Script" path="res://Minigames/mouseMinigame/canvas_layer.gd" id="1_37rai"]
+[ext_resource type="Script" path="res://Minigames/mouseMinigame/minigame2.gd" id="1_v2lfg"]
+[ext_resource type="Texture2D" uid="uid://t5tk4jp3uhgy" path="res://Minigames/mouseMinigame/reze.jpg" id="2_tg4cr"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_37rai")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_v2lfg")
+
+[node name="Middle" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 499.00003
+offset_top = 260.0
+offset_right = 724.0
+offset_bottom = 485.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_tg4cr")
+
+[node name="Time" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 14.0
+offset_right = 751.0
+offset_bottom = 151.0
+theme_override_font_sizes/font_size = 75
+text = "wdwfa"
+horizontal_alignment = 1
+
+[node name="smallMovement" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+
+[node name="largeMovement" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true

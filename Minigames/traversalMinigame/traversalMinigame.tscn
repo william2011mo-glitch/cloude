@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ba2tn5jo7jl3s"]
 
-[ext_resource type="Script" uid="uid://c7ui8fm6igyw8" path="res://Minigames/traversalMinigame.gd" id="1_g6vk7"]
+[ext_resource type="Script" uid="uid://c7ui8fm6igyw8" path="res://Minigames/traversalMinigame/traversalMinigame.gd" id="1_g6vk7"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
