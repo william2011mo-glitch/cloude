@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://d1uy5l2orwsob"]
+[gd_scene load_steps=3 format=3 uid="uid://d1uy5l2orwsob"]
+
+[ext_resource type="Script" uid="uid://dvc2gfctqmny2" path="res://Minigames/wiresMinigame/wire_1.gd" id="1_jyay2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vlpvm"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -10,9 +14,11 @@ color = Color(0, 0, 0, 0.43137255)
 [node name="Manager" type="Node2D" parent="."]
 
 [node name="Wire1" type="Node2D" parent="Manager"]
+script = ExtResource("1_jyay2")
 
-[node name="Wire2" type="Node2D" parent="Manager"]
+[node name="Polygon2D" type="Polygon2D" parent="Manager/Wire1"]
 
-[node name="Wire3" type="Node2D" parent="Manager"]
+[node name="Area2D" type="Area2D" parent="Manager/Wire1"]
 
-[node name="Wire4" type="Node2D" parent="Manager"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Manager/Wire1/Area2D"]
+shape = SubResource("CircleShape2D_vlpvm")
