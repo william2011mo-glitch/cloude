@@ -6,3 +6,13 @@
 offset_right = 1938.0
 offset_bottom = 1089.0
 color = Color(0, 0, 0, 0.43137255)
+
+[node name="Manager" type="Node2D" parent="."]
+
+[node name="Wire1" type="Node2D" parent="Manager"]
+
+[node name="Wire2" type="Node2D" parent="Manager"]
+
+[node name="Wire3" type="Node2D" parent="Manager"]
+
+[node name="Wire4" type="Node2D" parent="Manager"]
