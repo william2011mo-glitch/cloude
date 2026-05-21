@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ArrayTraversalMinigame"
-run/main_scene="uid://d1uy5l2orwsob"
+run/main_scene="uid://cgjwcniko8tut"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cgjwcniko8tut"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Traversal" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 137.0
+offset_right = 769.0
+offset_bottom = 362.0
+theme_override_font_sizes/font_size = 40
+text = "traversal minigame
+"
+
+[node name="Mouse" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 1278.0
+offset_top = 130.0
+offset_right = 1851.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 40
+text = "mouse minigame
+"
+
+[node name="Wires" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 607.0
+offset_right = 774.0
+offset_bottom = 832.0
+theme_override_font_sizes/font_size = 40
+text = "wires (unfinished)"
