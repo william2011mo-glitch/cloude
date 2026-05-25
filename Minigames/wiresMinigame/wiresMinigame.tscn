@@ -26,5 +26,5 @@ polygon = PackedVector2Array(-205.3302, 294.79132, -204, 527.6956, 74, 530.513, 
 [node name="Area2D" type="Area2D" parent="Manager/Wire1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Manager/Wire1/Area2D"]
-scale = Vector2(10, 10)
+scale = Vector2(8, 8)
 shape = SubResource("CircleShape2D_vlpvm")
