@@ -10,7 +10,7 @@ var isDragging = false;
 var freeEnd = Vector2(500, 400);
 var anchor = Vector2(100, 400);
 var startPos = Vector2(500, 400);
-var target = Vector2(1600, 400);
+var target = Vector2(1700, 430);
 var tol = 100;
 var connected = false;
 
@@ -41,7 +41,7 @@ func updateWire():
 	var perp = Vector2(-direction.y, direction.x)*75;
 		
 	polygon.polygon = [anchor + perp, anchor - perp, freeEnd - perp, freeEnd + perp];
-	hitbox.position = freeEnd-Vector2(100, 0);
+	hitbox.position = freeEnd-Vector2(150, 0);
 
 func snap():
 	if(get_local_mouse_position().distance_to(target)<=tol):
