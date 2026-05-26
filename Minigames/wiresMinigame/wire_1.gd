@@ -1,32 +1,33 @@
 extends Node2D
 
+signal wireConnected
+
 @onready var polygon: Polygon2D = $Polygon2D
 @onready var hitbox: Area2D = $Area2D
+
+var color = Color.RED
 var isDragging = false;
-var freeEnd = Vector2(500, 600);
-var anchor = Vector2(100, 600);
-var startPos = Vector2(500, 600);
-var target = Vector2(1600, 300);
-var tol = 150;
+var freeEnd = Vector2(500, 400);
+var anchor = Vector2(100, 400);
+var startPos = Vector2(500, 400);
+var target = Vector2(1600, 400);
+var tol = 100;
 var connected = false;
 
 func _ready() -> void:	
-	polygon.color = Color.RED
+	polygon.color = color
 	hitbox.input_event.connect(_on_area_2d_input_event);
 	updateWire();
 	
 	var targetDisplay = ColorRect.new() #this is actually pretty useful.
-	targetDisplay.color = Color.RED
-	targetDisplay.size = Vector2(300, 300);
-	targetDisplay.position = target-Vector2(150, 150);
+	targetDisplay.color = color
+	targetDisplay.size = Vector2(200, 200);
+	targetDisplay.position = target-Vector2(100, 100);
 	add_child(targetDisplay)
 
 func _process(_delta: float) -> void:
 	if(isDragging):
-		freeEnd = get_local_mouse_position();
-		var localMouse = get_local_mouse_position()
-		var viewportMouse = get_viewport().get_mouse_position()
-		print("local mouse: ", localMouse, " viewport mouse: ", viewportMouse, " freeEnd: ", freeEnd)
+		freeEnd = getMousePos()
 		updateWire();
 		hitbox.position = freeEnd;
 		if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
@@ -37,19 +38,19 @@ func _process(_delta: float) -> void:
 func updateWire():
 	#.normalized sets the magnitude of the vector to 1
 	var direction = Vector2(freeEnd-anchor).normalized();
-	var perp = Vector2(-direction.y, direction.x)*100;
+	var perp = Vector2(-direction.y, direction.x)*75;
 		
 	polygon.polygon = [anchor + perp, anchor - perp, freeEnd - perp, freeEnd + perp];
-	print("freeEnd: ", freeEnd, " polygon freeEnd corner: ", freeEnd - perp)
-	hitbox.position = freeEnd;
+	hitbox.position = freeEnd-Vector2(100, 0);
 
 func snap():
-	if(freeEnd.distance_to(target)<=tol):
+	if(get_local_mouse_position().distance_to(target)<=tol):
 		#tries to snap to target location
-		freeEnd = target;
+		freeEnd = getScaledPos(target);
 		connected = true;
 		hitbox.position = freeEnd
 		updateWire()
+		emit_signal("wireConnected")
 	else:
 		#if not just go back
 		reset();
@@ -57,6 +58,20 @@ func snap():
 func reset():
 	freeEnd = startPos;
 	updateWire();
+
+#TLDR scaling is terrible in godot so you have to use this rounabout way to do it.
+func getMousePos() -> Vector2:
+	var scale_x = polygon.global_transform.x.x
+	var scale_y = polygon.global_transform.y.y
+	var mouse = get_viewport().get_mouse_position()
+	return Vector2(mouse.x / scale_x, mouse.y / scale_y)
+	
+
+func getScaledPos(pos: Vector2) -> Vector2:
+	var scale_x = polygon.global_transform.x.x
+	var scale_y = polygon.global_transform.y.y
+	return Vector2(pos.x / scale_x, pos.y / scale_y)
+
 
 #if you click on the wire's hitbox
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:

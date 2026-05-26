@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch0lay48jwpai"]
+
+[ext_resource type="Script" uid="uid://dvc2gfctqmny2" path="res://Minigames/wiresMinigame/wire_1.gd" id="1_bxgrs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vlpvm"]
+radius = 12.141098
+
+[node name="Wire1" type="Node2D"]
+script = ExtResource("1_bxgrs")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+scale = Vector2(0.75177306, 1.0648148)
+color = Color(0.89411765, 0, 0.1764706, 1)
+polygon = PackedVector2Array(-205.3302, 294.79132, -204, 527.6956, 74, 530.513, 78, 292.91302)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(10, 10)
+shape = SubResource("CircleShape2D_vlpvm")

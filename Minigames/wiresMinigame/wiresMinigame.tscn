@@ -1,9 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d1uy5l2orwsob"]
 
-[ext_resource type="Script" uid="uid://dvc2gfctqmny2" path="res://Minigames/wiresMinigame/wire_1.gd" id="1_jyay2"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_vlpvm"]
-radius = 12.141098
+[ext_resource type="Script" uid="uid://t3g5ns4bdv7d" path="res://Minigames/wiresMinigame/manager.gd" id="1_15d5e"]
+[ext_resource type="PackedScene" uid="uid://ch0lay48jwpai" path="res://Minigames/wiresMinigame/wire_1.tscn" id="1_shukr"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -14,17 +12,6 @@ mouse_filter = 2
 color = Color(0, 0, 0, 0.23529412)
 
 [node name="Manager" type="Node2D" parent="."]
+script = ExtResource("1_15d5e")
 
-[node name="Wire1" type="Node2D" parent="Manager"]
-script = ExtResource("1_jyay2")
-
-[node name="Polygon2D" type="Polygon2D" parent="Manager/Wire1"]
-scale = Vector2(0.75177306, 1.0648148)
-color = Color(0.89411765, 0, 0.1764706, 1)
-polygon = PackedVector2Array(-205.3302, 294.79132, -204, 527.6956, 74, 530.513, 78, 292.91302)
-
-[node name="Area2D" type="Area2D" parent="Manager/Wire1"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Manager/Wire1/Area2D"]
-scale = Vector2(8, 8)
-shape = SubResource("CircleShape2D_vlpvm")
+[node name="Wire1" parent="Manager" instance=ExtResource("1_shukr")]
