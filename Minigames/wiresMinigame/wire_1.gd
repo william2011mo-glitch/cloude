@@ -65,7 +65,7 @@ func getMousePos() -> Vector2:
 	var scale_y = polygon.global_transform.y.y
 	var mouse = get_viewport().get_mouse_position()
 	return Vector2(mouse.x / scale_x, mouse.y / scale_y)
-	
+#correct implementation
 
 func getScaledPos(pos: Vector2) -> Vector2:
 	var scale_x = polygon.global_transform.x.x
