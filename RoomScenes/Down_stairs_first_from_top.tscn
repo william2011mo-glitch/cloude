@@ -1,11 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpxd4vso44nm3"]
+[gd_scene format=3 uid="uid://cpxd4vso44nm3"]
 
 [ext_resource type="Texture2D" uid="uid://cnnjbntjedup" path="res://MapAssets/2d Down stairs 1.png" id="1_r8cpg"]
+[ext_resource type="Texture2D" uid="uid://yvabttlgfc1l" path="res://LeftArrow.png" id="2_dqr5y"]
+[ext_resource type="Script" uid="uid://c4ikwf01soitt" path="res://RoomScenes/left_button.gd" id="3_q0xy8"]
 
-[node name="DownStairsFirstFromTop" type="Node2D"]
+[node name="DownStairsFirstFromTop" type="Node2D" unique_id=1920014298]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=323154461]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_r8cpg")
 expand_mode = 3
+
+[node name="LeftButton" type="TextureButton" parent="." unique_id=519059729]
+offset_left = 25.0
+offset_top = 456.0
+offset_right = 225.0
+offset_bottom = 656.0
+texture_normal = ExtResource("2_dqr5y")
+script = ExtResource("3_q0xy8")
