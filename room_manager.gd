@@ -105,7 +105,7 @@ var rooms = {
 		"scene": "res://RoomScenes/fancy_room_upper_first.tscn",
 		"exits": {
 			"back": "Upper_middle_forward_final",
-			"forward": "Golden_Baby",
+			#"forward": "Golden_Baby",
 			"right": "Morning_room_right"
 		}
 	},
@@ -202,3 +202,5 @@ func load_room():
 	var currnode = load(scene_path)
 	var z = currnode.instantiate()
 	self.add_child(z)
+func fetch_possible_directions():
+	return rooms[current_room]["exits"]

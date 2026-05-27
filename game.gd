@@ -8,8 +8,20 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
+	var visibleArrows = $RoomManager.fetch_possible_directions()
+	
+	if visibleArrows.has('left'):
+		$LeftArrow.visible = true
+	else: $LeftArrow.visible = false
+	if visibleArrows.has('forward'):
+		$ForwardArrow.visible = true
+	else: $ForwardArrow.visible = false
+	if visibleArrows.has('back'):
+		$BackArrow.visible = true
+	else: $BackArrow.visible = false
+	if visibleArrows.has('right'):
+		$RightArrow.visible = true
+	else: $RightArrow.visible = false
 
 func _on_left_arrow_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
