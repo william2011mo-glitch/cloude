@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bk6c477pd0rgi"]
 
-[ext_resource type="Script" path="res://Minigames/mouseMinigame/canvas_layer.gd" id="1_37rai"]
-[ext_resource type="Script" path="res://Minigames/mouseMinigame/minigame2.gd" id="1_v2lfg"]
+[ext_resource type="Script" uid="uid://b215nily4ojl7" path="res://Minigames/mouseMinigame/canvas_layer.gd" id="1_37rai"]
+[ext_resource type="Script" uid="uid://bepl1wy4rygel" path="res://Minigames/mouseMinigame/minigame2.gd" id="1_v2lfg"]
 [ext_resource type="Texture2D" uid="uid://t5tk4jp3uhgy" path="res://Minigames/mouseMinigame/reze.jpg" id="2_tg4cr"]
 
 [node name="CanvasLayer" type="CanvasLayer"]

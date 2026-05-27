@@ -2,7 +2,7 @@ extends CanvasLayer
 @onready var small: Timer = $smallMovement
 @onready var large: Timer = $largeMovement
 var shake_pos
-var move_amount = 500
+var move_amount = 250
 var moving = false
 var base_pos
 # Called when the node enters the scene tree for the first time.

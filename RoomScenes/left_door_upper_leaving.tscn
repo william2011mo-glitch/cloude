@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dytmi1li5m7c7"]
+
+[ext_resource type="Texture2D" uid="uid://b7xvtipmq1w85" path="res://MapAssets/3h coming back from the left door.png" id="1_ihts2"]
+
+[node name="LeftDoorUpperLeaving" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_ihts2")
+expand_mode = 3

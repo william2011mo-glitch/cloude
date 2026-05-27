@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://y4uprgu7bojh"]
+
+[ext_resource type="Texture2D" uid="uid://c4au6xewtfmq8" path="res://MapAssets/6c Small DR turn to right.png" id="1_topjl"]
+
+[node name="UpperRightSmallFancyRoomLeft" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_topjl")
+expand_mode = 3

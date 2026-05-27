@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://b27qpp530ugxf"]
+
+[ext_resource type="Texture2D" uid="uid://blv7ect88m48w" path="res://MapAssets/6d Small DR pot.png" id="1_x1bp0"]
+[ext_resource type="Script" uid="uid://c8cntmoquf3qu" path="res://RoomScenes/upper_small_fancy_room_pot.gd" id="1_xf7ov"]
+[ext_resource type="Texture2D" uid="uid://b5iuwt833livk" path="res://MapAssets/6e Small DR pot IS OPENED WITH DIAMOND.png" id="3_g2e54"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2aucn"]
+radius = 225.0
+height = 544.0
+
+[node name="UpperSmallFancyRoomPot" type="Node2D"]
+script = ExtResource("1_xf7ov")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_x1bp0")
+expand_mode = 3
+
+[node name="revealed" type="TextureRect" parent="."]
+visible = false
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("3_g2e54")
+expand_mode = 3
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(936, 619)
+scale = Vector2(1.5740516, 0.9440488)
+shape = SubResource("CapsuleShape2D_2aucn")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

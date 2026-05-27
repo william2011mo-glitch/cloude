@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://86rd47up2ki"]
+
+[ext_resource type="Texture2D" uid="uid://66f33bg73jb" path="res://MapAssets/5a First Step in the Great DR.png" id="1_hnpmx"]
+
+[node name="FancyRoomUpperFirst" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_hnpmx")
+expand_mode = 3

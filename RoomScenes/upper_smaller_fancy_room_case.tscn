@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv8xpeaycny05"]
+
+[ext_resource type="Texture2D" uid="uid://cmxcas3lk0mhb" path="res://MapAssets/7d First case of porcelain PR CLOSED.png" id="1_c1lrd"]
+
+[node name="UpperSmallerFancyRoomCase" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_c1lrd")
+expand_mode = 3

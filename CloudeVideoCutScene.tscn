@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dy675xhxdesef"]
 
 [ext_resource type="Script" uid="uid://37xqoncilp1s" path="res://Intro/CloudVideoCutScene/CloudeVideoCutScene.gd" id="1_cutscene"]
-[ext_resource type="VideoStream" uid="uid://c0lcuacwluxcl" path="res://Minigames/traversalMinigame/CloudeVideoRecordingFINAL.ogv" id="2_ltnqa"]
+[ext_resource type="VideoStream" uid="uid://c0lcuacwluxcl" path="res://Intro/CloudVideoCutScene/CloudeVideoRecordingFINAL.ogv" id="2_ltnqa"]
 
 [node name="CloudeVideoCutScene" type="Control"]
 layout_mode = 3
@@ -27,3 +27,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_default_cursor_shape = 2
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

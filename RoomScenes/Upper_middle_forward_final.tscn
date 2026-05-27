@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://di34jg5802mmp"]
+
+[ext_resource type="Texture2D" uid="uid://y8sc7bvm4hvw" path="res://MapAssets/4j Close to door near 2 boys MR.png" id="1_yt8dq"]
+
+[node name="UpperMiddleForwardFinal" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_yt8dq")
+expand_mode = 3

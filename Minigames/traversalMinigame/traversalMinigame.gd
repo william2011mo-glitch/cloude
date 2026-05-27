@@ -60,9 +60,13 @@ func build_ui():
 	list_input    = _make_line_edit("List name",    "list",        120)
 	find_input    = _make_line_edit("Find name",    "findMe",      120)
 	replace_input = _make_line_edit("Replace name", "replaceWith", 140)
-
+	
+	
+	
+	
 	for field in [list_input, find_input, replace_input]:
 		hbox.add_child(field)
+		field.editable = false
 
 	# Code input
 	var code_label = Label.new()

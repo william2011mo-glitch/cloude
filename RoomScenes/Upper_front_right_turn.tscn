@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://vsgxsgdw8cmi"]
+
+[ext_resource type="Texture2D" uid="uid://doou20s3h5ksq" path="res://MapAssets/3e Close to Right door UV.png" id="1_t4508"]
+
+[node name="UpperFrontRightTurn" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_t4508")
+expand_mode = 3

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://5t5rjpgt75od"]
+
+[ext_resource type="Texture2D" uid="uid://c7y2aaluv4pdu" path="res://MapAssets/4d Morning Room Close to Door.png" id="1_f2yg1"]
+
+[node name="UpperMiddleRoomRightTurn" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_f2yg1")
+expand_mode = 3

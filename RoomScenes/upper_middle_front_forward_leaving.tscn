@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://kjy11cleneu2"]
+
+[ext_resource type="Texture2D" uid="uid://bjarmr0416kbj" path="res://MapAssets/4f Turned Around Opposide MR.png" id="1_g7igg"]
+
+[node name="UpperMiddleFrontForwardLeaving" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_g7igg")
+expand_mode = 3

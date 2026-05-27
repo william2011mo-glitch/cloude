@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://1gm8e0b2n5u"]
+
+[ext_resource type="Texture2D" uid="uid://br7a238a1oxaw" path="res://MapAssets/3f Chest also shira make one with it open bcs this is an item.png" id="1_dkf1c"]
+
+[node name="UpperFrontChest" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_dkf1c")
+expand_mode = 3

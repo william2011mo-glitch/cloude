@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7cxvgg0sgxk1"]
+
+[ext_resource type="Texture2D" uid="uid://b4i5jlrhwgiw4" path="res://MapAssets/7a first step in the PR.png" id="1_lbiqb"]
+
+[node name="UpperSmallerFancyRoomFirst" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_lbiqb")
+expand_mode = 3

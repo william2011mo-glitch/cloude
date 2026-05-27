@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cno4v7hmorjfr"]
+
+[ext_resource type="Texture2D" uid="uid://dg8usayn7ld7n" path="res://MapAssets/5d Great DR -_ Small DR.png" id="1_k0yi3"]
+
+[node name="FancyRoomUpperRight" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_k0yi3")
+expand_mode = 3

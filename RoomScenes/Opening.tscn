@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddvtdfylbsole"]
+
+[ext_resource type="Texture2D" uid="uid://bnhwqjj1jmyru" path="res://MapAssets/1a Opening.png" id="1_coxio"]
+
+[node name="Opening_center" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_coxio")
+expand_mode = 3

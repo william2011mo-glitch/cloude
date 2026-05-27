@@ -1,9 +1,10 @@
 extends Control
 
-@export var pause_times: Array[float] = []
+@export var pause_times: Array[float] = [1.5, 11.5, 19.0, 21, 28.0, 31.0, 36.0, 39]
 
-@onready var video_player: VideoStreamPlayer = $VideoContainer/VideoStreamPlayer
-@onready var click_zone: Control = $ClickZone
+@onready var video_player: VideoStreamPlayer = $VideoStreamPlayer
+@onready var click_zone: Control = $ClickArea
+
 
 var _triggered: Array[bool] = []
 
@@ -26,3 +27,7 @@ func _on_click_zone_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		if video_player.paused:
 			video_player.paused = false
+
+
+func _on_video_stream_player_finished() -> void:
+	queue_free()

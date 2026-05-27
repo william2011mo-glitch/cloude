@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxdfamryvlo8k"]
+
+[ext_resource type="Texture2D" uid="uid://ctjxxbo4qx05k" path="res://MapAssets/4e Left of Table MR.png" id="1_wmuiw"]
+
+[node name="UpperMiddleRoomForwardOne" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_wmuiw")
+expand_mode = 3

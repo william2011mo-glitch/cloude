@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dup6p16hcyyvf"]
+
+[ext_resource type="Texture2D" uid="uid://cjuonepo1lye3" path="res://MapAssets/1b Turn to Right.png" id="1_ffe4f"]
+
+[node name="OpeningRight" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_ffe4f")
+expand_mode = 3

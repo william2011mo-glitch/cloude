@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dexgaad7jvkp1"]
+
+[ext_resource type="Texture2D" uid="uid://dkj58xbpiteyw" path="res://MapAssets/3g coming back from the middle door.png" id="1_s18dx"]
+
+[node name="UpperLeavingMiddle" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_s18dx")
+expand_mode = 3

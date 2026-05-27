@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://lfa7at1kew0o"]
+
+[ext_resource type="Texture2D" uid="uid://2o7nkx23nilt" path="res://MapAssets/2e Down the stairs 2.png" id="1_55ypx"]
+
+[node name="DownStairsSecondFromTop" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_55ypx")
+expand_mode = 3

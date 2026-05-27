@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4fogiav4cmd5"]
+
+[ext_resource type="Texture2D" uid="uid://cswhhc8bpwprx" path="res://MapAssets/3c Turn toward left door UV.png" id="1_tt4o1"]
+
+[node name="UpperFrontLeftTurn" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_tt4o1")
+expand_mode = 3
