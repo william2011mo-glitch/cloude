@@ -2,8 +2,8 @@ extends Control
 
 @export var pause_times: Array[float] = [1.5, 11.5, 19.0, 21, 28.0, 31.0, 36.0, 39]
 
-@onready var video_player: VideoStreamPlayer = $VideoStreamPlayer
-@onready var click_zone: Control = $ClickArea
+@onready var video_player: VideoStreamPlayer = $VideoContainer/VideoStreamPlayer
+@onready var click_zone: Control = $ClickZone
 
 
 var _triggered: Array[bool] = []
