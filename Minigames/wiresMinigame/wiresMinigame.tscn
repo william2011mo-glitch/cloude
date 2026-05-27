@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1uy5l2orwsob"]
+[gd_scene load_steps=2 format=3 uid="uid://d1uy5l2orwsob"]
 
 [ext_resource type="Script" uid="uid://t3g5ns4bdv7d" path="res://Minigames/wiresMinigame/manager.gd" id="1_15d5e"]
-[ext_resource type="PackedScene" uid="uid://ch0lay48jwpai" path="res://Minigames/wiresMinigame/wire_1.tscn" id="1_shukr"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -13,5 +12,3 @@ color = Color(0, 0, 0, 0.23529412)
 
 [node name="Manager" type="Node2D" parent="."]
 script = ExtResource("1_15d5e")
-
-[node name="Wire1" parent="Manager" instance=ExtResource("1_shukr")]

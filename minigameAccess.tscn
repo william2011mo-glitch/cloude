@@ -1,4 +1,6 @@
-[gd_scene load_steps=0 format=3 uid="uid://cgjwcniko8tut"]
+[gd_scene load_steps=2 format=3 uid="uid://cgjwcniko8tut"]
+
+[ext_resource type="Script" uid="uid://c3htb6426dy7e" path="res://minigameAccess.gd" id="1_jnths"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -7,6 +9,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_jnths")
 
 [node name="Traversal" type="Button" parent="Control"]
 layout_mode = 0
@@ -20,10 +23,10 @@ text = "traversal minigame
 
 [node name="Mouse" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 1278.0
-offset_top = 130.0
-offset_right = 1851.0
-offset_bottom = 355.0
+offset_left = 1242.0
+offset_top = 136.0
+offset_right = 1815.0
+offset_bottom = 361.0
 theme_override_font_sizes/font_size = 40
 text = "mouse minigame
 "
@@ -36,3 +39,12 @@ offset_right = 774.0
 offset_bottom = 832.0
 theme_override_font_sizes/font_size = 40
 text = "wires (unfinished)"
+
+[node name="Cloude" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 1244.0
+offset_top = 612.0
+offset_right = 1817.0
+offset_bottom = 837.0
+theme_override_font_sizes/font_size = 40
+text = "cloude scene"
