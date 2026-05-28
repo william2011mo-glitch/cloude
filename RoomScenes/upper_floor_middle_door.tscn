@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d1fvma4rm2310"]
+
+[ext_resource type="Texture2D" uid="uid://7fxr52xn1gva" path="res://MapAssets/3b Upper Floor -_ Morning Room.png" id="1_qjbe7"]
+
+[node name="UpperFrontChest" type="Node2D" unique_id=1559288221]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=94512876]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_qjbe7")
+expand_mode = 3
