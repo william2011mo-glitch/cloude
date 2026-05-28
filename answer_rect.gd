@@ -14,7 +14,3 @@ func _gui_input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			currentColorI = (currentColorI+1) % len(picCycle)
 			color = picCycle[currentColorI]
-			
-
-func _on_left_button_pressed():
-	get_tree().change_scene_to_file("res://RoomScenes/Down_stairs_second_from_top.tscn")
