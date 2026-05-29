@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://chbp01g4dvbme"]
+
+[ext_resource type="Texture2D" uid="uid://00ebmlugw4b4" path="res://MapAssets/4i Right of Table MR.png" id="1_faf4m"]
+
+[node name="UpperMiddleRoomForwardOne" type="Node2D" unique_id=2073027077]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1599925552]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_faf4m")
+expand_mode = 3
