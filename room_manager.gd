@@ -36,7 +36,6 @@ var rooms = {
 	"Upper_main": {
 		"scene": "res://RoomScenes/stairs_to_front_upper_entrance.tscn",
 		"exits": {
-			"forward": "Upper_middle_room_enter",
 			"left": "Upper_main_left_turn",
 			"right": "Upper_main_right_turn",
 			"back": "Down_stairs_2",
@@ -55,7 +54,8 @@ var rooms = {
 	"Upper_door_closer": {
 		"scene": "res://RoomScenes/upper_floor_middle_door.tscn",
 		"exits": {
-			"back": "Upper_main"
+			"back": "Upper_main",
+			"actual_door": "Upper_middle_room_enter"
 		}
 	},
 	

@@ -1,11 +1,24 @@
 [gd_scene format=3 uid="uid://d1fvma4rm2310"]
 
+[ext_resource type="Script" uid="uid://bs48ojs87a488" path="res://RoomScenes/upper_floor_middle_door.gd" id="1_o8mmc"]
 [ext_resource type="Texture2D" uid="uid://7fxr52xn1gva" path="res://MapAssets/3b Upper Floor -_ Morning Room.png" id="1_qjbe7"]
 
-[node name="UpperFrontChest" type="Node2D" unique_id=1559288221]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mrkp"]
+size = Vector2(750, 972)
+
+[node name="Upper_floor_middle_door" type="Node2D" unique_id=1559288221]
+script = ExtResource("1_o8mmc")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=94512876]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_qjbe7")
 expand_mode = 3
+
+[node name="actual_door" type="Area2D" parent="." unique_id=288541123]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="actual_door" unique_id=385933007]
+position = Vector2(972, 599)
+shape = SubResource("RectangleShape2D_4mrkp")
+
+[connection signal="input_event" from="actual_door" to="." method="_on_closer_door_input_event"]
