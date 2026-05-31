@@ -21,7 +21,7 @@ var rooms = {
 		"exits": {
 			"right": "Up_stairs_2",
 			"forward": "Up_stairs_2",
-			"back": "Opening_first"
+			"back": "Down_stairs_to_opening"
 		}
 	},
 
@@ -29,25 +29,33 @@ var rooms = {
 		"scene": "res://RoomScenes/up_stairs.tscn",
 		"exits": {
 			"forward": "Upper_main",
-			"back": "Up_stairs_1"
+			"back": "Down_stairs_2"
 		}
 	},
 	
 	"Upper_main": {
 		"scene": "res://RoomScenes/stairs_to_front_upper_entrance.tscn",
 		"exits": {
-			"forward": "Upper_middle_room_enter",
 			"left": "Upper_main_left_turn",
 			"right": "Upper_main_right_turn",
-			"back": "down_stairs_2",
-			"chest": "chest"
-		}
+			"back": "Down_stairs_2",
+			"chest": "chest",
+			"Upper_door_closer": "Upper_door_closer"
+		},
 	},
 	
 	"chest": {
 		"scene": "res://RoomScenes/upper_front_chest.tscn",
 		"exits": {
 			"back": "Upper_main"
+		}
+	},
+	
+	"Upper_door_closer": {
+		"scene": "res://RoomScenes/upper_floor_middle_door.tscn",
+		"exits": {
+			"back": "Upper_main",
+			"actual_door": "Upper_middle_room_enter"
 		}
 	},
 	
@@ -68,20 +76,28 @@ var rooms = {
 		"scene": "res://RoomScenes/upper_middle_entered_first.tscn",
 		"exits": {
 			"back": "leaving_upper_middle",
-			"forward": "Upper_middle_forward_2",
-			"right": "Upper_middle_right"
+			"left": "Upper_middle_forward_1",
+			"right": "Upper_middle_forward_2"
 		}
 	},
 	"leaving_upper_middle": {
 		"scene": "res://RoomScenes/upper_leaving_middle.tscn",
 		"exits": {
-			"forward": "down_stairs_2"
+			"forward": "Down_stairs_2"
 		}
 	},
-	"Upper_middle_forward_2": {
+	"Upper_middle_forward_1": {
 		"scene": "res://RoomScenes/upper_middle_room_forward_one.tscn",
 		"exits": {
 			"forward": "Upper_middle_forward_final",
+			"back": "Upper_middle_room_enter"
+		}
+	},
+	"Upper_middle_forward_2": {
+		"scene": "res://RoomScenes/upper_middle_room_forward_two.tscn",
+		"exits": {
+			"forward": "Upper_middle_forward_final",
+			"left": "Upper_middle_right_leaving",
 			"right": "Upper_middle_right",
 			"back": "Upper_middle_room_enter"
 		}
@@ -93,11 +109,18 @@ var rooms = {
 			"back": "Upper_middle_room_enter"
 		}
 	},
+	"Upper_middle_right_leaving": {
+		"scene": "res://RoomScenes/upper_middle_right_turn_leaving.tscn",
+		"exits": {
+			"right": "Upper_middle_forward_final",
+			"back": "Upper_middle_right"
+		}
+	},
 	"Upper_middle_forward_final": {
 		"scene": "res://RoomScenes/Upper_middle_forward_final.tscn",
 		"exits": {
 			"forward": "Morning_room_enter",
-			"back": "Upper_middle_forward_2"
+			"back": "Upper_middle_forward_1"
 		}
 	},
 	
@@ -157,25 +180,25 @@ var rooms = {
 		}
 	},
 	
-	"down_stairs_2": {
+	"Down_stairs_2": {
 		"scene": "res://RoomScenes/Down_stairs_first_from_top.tscn",
 		"exits": {
-			"forward": "down_stairs_1",
-			"back": "Upper_main"
-		}
-	},
-	"down_stairs_1": {
-		"scene": "res://RoomScenes/Down_stairs_second_from_top.tscn",
-		"exits": {
-			"forward": "down_stairs_to_opening",
+			"forward": "Down_stairs_1",
 			"back": "Up_stairs_2"
 		}
 	},
-	"down_stairs_to_opening": {
+	"Down_stairs_1": {
+		"scene": "res://RoomScenes/Down_stairs_second_from_top.tscn",
+		"exits": {
+			"forward": "Down_stairs_to_opening",
+			"back": "Up_stairs_2"
+		}
+	},
+	"Down_stairs_to_opening": {
 		"scene": "res://RoomScenes/stairs_to_opening.tscn",
 		"exits": {
 			"forward": "Opening_first",
-			"back": "Upper_main"
+			"back": "Up_stairs_1"
 		}
 	},
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://uh5f86t3oopo"]
+[gd_scene format=3 uid="uid://uh5f86t3oopo"]
 
 [ext_resource type="Texture2D" uid="uid://dgoghngtbe0j8" path="res://MapAssets/3a The Upper Floor Entrance.png" id="1_ec311"]
 [ext_resource type="Script" uid="uid://dm1if1t7ytql0" path="res://RoomScenes/stairs_to_front_upper_entrance.gd" id="1_egirf"]
@@ -6,19 +6,29 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tihn1"]
 size = Vector2(262, 153)
 
-[node name="StairsToFrontUpperEntrance" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egirf"]
+size = Vector2(274.5, 467.5)
+
+[node name="StairsToFrontUpperEntrance" type="Node2D" unique_id=1728085223]
 script = ExtResource("1_egirf")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1557596379]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_ec311")
 expand_mode = 3
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="chest" type="Area2D" parent="." unique_id=1151696664]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chest" unique_id=62726063]
 position = Vector2(571, 825)
 shape = SubResource("RectangleShape2D_tihn1")
 
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[node name="Upper_floor_middle_door" type="Area2D" parent="." unique_id=1717520944]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Upper_floor_middle_door" unique_id=1977385547]
+position = Vector2(964.75, 617.25)
+shape = SubResource("RectangleShape2D_egirf")
+
+[connection signal="input_event" from="chest" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Upper_floor_middle_door" to="." method="_on_door_input_event"]
