@@ -16,5 +16,8 @@ func _on_checik_pressed() -> void:
 		answerSq.append(a.currentColorI)
 	if(codeSq == answerSq):
 		$manager/result.text = 'Correct'
+		get_parent().passed = true
 	else:
 		$manager/result.text = 'Incorrect'
+		get_parent().passed = false
+	queue_free()
