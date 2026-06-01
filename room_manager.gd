@@ -19,7 +19,6 @@ var rooms = {
 	"Up_stairs_1": {
 		"scene": "res://RoomScenes/opening_to_stairs.tscn",
 		"exits": {
-			"right": "Up_stairs_2",
 			"forward": "Up_stairs_2",
 			"back": "Down_stairs_to_opening"
 		}
@@ -143,24 +142,31 @@ var rooms = {
 	"Upper_middle_forward_final": {
 		"scene": "res://RoomScenes/Upper_middle_forward_final.tscn",
 		"exits": {
-			"door_yes": "Morning_room_enter",
+			"door_yes": "Big_DR_enter",
 			"back": "Upper_middle_room_opposite"
 		}
 	},
 	
-	"Morning_room_enter": {
+	"Big_DR_enter": {
 		"scene": "res://RoomScenes/fancy_room_upper_first.tscn",
 		"exits": {
 			"back": "Upper_middle_forward_final",
 			#"forward": "Golden_Baby",
-			"right": "Morning_room_right"
+			"right": "Big_DR_right"
 		}
 	},
-	"Morning_room_right": {
+	"Big_DR_right": {
 		"scene": "res://RoomScenes/fancy_room_upper_right.tscn",
 		"exits": {
-			"back": "Morning_room_enter",
-			"forward": "Small_pot_room",
+			"back": "Big_DR_leaving",
+			"door_this_one": "Small_pot_room",
+		}
+	},
+	"Big_DR_leaving": {
+		"scene": "res://RoomScenes/fancy_upper_right_leaving.tscn",
+		"exits": {
+			"back": "Big_DR_right",
+			"left": "Big_DR_enter",
 		}
 	},
 	"Small_pot_room": {

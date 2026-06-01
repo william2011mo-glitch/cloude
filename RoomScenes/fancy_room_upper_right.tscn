@@ -1,11 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://cno4v7hmorjfr"]
+[gd_scene format=3 uid="uid://cno4v7hmorjfr"]
 
 [ext_resource type="Texture2D" uid="uid://dg8usayn7ld7n" path="res://MapAssets/5d Great DR -_ Small DR.png" id="1_k0yi3"]
+[ext_resource type="Script" uid="uid://cx70do5anyhif" path="res://RoomScenes/fancy_room_upper_right.gd" id="1_xpbyt"]
 
-[node name="FancyRoomUpperRight" type="Node2D"]
+[node name="FancyRoomUpperRight" type="Node2D" unique_id=1675592087]
+script = ExtResource("1_xpbyt")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1502954775]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_k0yi3")
 expand_mode = 3
+
+[node name="door_this_one" type="Area2D" parent="." unique_id=1694426175]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="door_this_one" unique_id=337116801]
+position = Vector2(531, 35)
+polygon = PackedVector2Array(-76, -34, -112, 1045, 797, 1045, 740, -33)
+
+[connection signal="input_event" from="door_this_one" to="." method="_on_door_this_one_input_event"]
