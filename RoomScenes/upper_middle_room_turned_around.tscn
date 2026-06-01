@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://mod3mjpaqrr"]
+
+[ext_resource type="Script" uid="uid://8x164e1ltysv" path="res://RoomScenes/upper_middle_room_turned_around.gd" id="1_1t3s3"]
+[ext_resource type="Texture2D" uid="uid://c6rudtej0v1xq" path="res://MapAssets/4h Turned Around Toward Entrance Door MR.png" id="1_p6jdy"]
+
+[node name="upper_middle_room_turned_around" type="Node2D" unique_id=239581758]
+script = ExtResource("1_1t3s3")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=104464089]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_p6jdy")
+expand_mode = 3
+
+[node name="door_out" type="Area2D" parent="." unique_id=859436865]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="door_out" unique_id=860963603]
+position = Vector2(231, -77)
+polygon = PackedVector2Array(383, 194, 383, 1070, 858, 1055, 851, 203)
+
+[connection signal="input_event" from="door_out" to="." method="_on_door_out_input_event"]

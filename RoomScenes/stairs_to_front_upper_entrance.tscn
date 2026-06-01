@@ -24,11 +24,11 @@ expand_mode = 3
 position = Vector2(571, 825)
 shape = SubResource("RectangleShape2D_tihn1")
 
-[node name="Upper_floor_middle_door" type="Area2D" parent="." unique_id=1717520944]
+[node name="middle_door" type="Area2D" parent="." unique_id=1717520944]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Upper_floor_middle_door" unique_id=1977385547]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="middle_door" unique_id=1977385547]
 position = Vector2(964.75, 617.25)
 shape = SubResource("RectangleShape2D_egirf")
 
 [connection signal="input_event" from="chest" to="." method="_on_area_2d_input_event"]
-[connection signal="input_event" from="Upper_floor_middle_door" to="." method="_on_door_input_event"]
+[connection signal="input_event" from="middle_door" to="." method="_on_door_input_event"]

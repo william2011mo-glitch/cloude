@@ -40,7 +40,7 @@ var rooms = {
 			"right": "Upper_main_right_turn",
 			"back": "Down_stairs_2",
 			"chest": "chest",
-			"Upper_door_closer": "Upper_door_closer"
+			"middle_door": "Upper_door_closer"
 		},
 	},
 	
@@ -75,15 +75,25 @@ var rooms = {
 	"Upper_middle_room_enter": {
 		"scene": "res://RoomScenes/upper_middle_entered_first.tscn",
 		"exits": {
-			"back": "leaving_upper_middle",
+			"back": "Upper_middle_room_turned",
 			"left": "Upper_middle_forward_1",
 			"right": "Upper_middle_forward_2"
 		}
 	},
-	"leaving_upper_middle": {
+	"Upper_middle_room_turned": {
+		"scene": "res://RoomScenes/upper_middle_room_turned_around.tscn",
+		"exits": {
+			"back": "Upper_middle_room_enter",
+			"door_going": "Leaving_upper_middle"
+		}
+	},
+	"Leaving_upper_middle": {
 		"scene": "res://RoomScenes/upper_leaving_middle.tscn",
 		"exits": {
-			"forward": "Down_stairs_2"
+			"forward": "Down_stairs_2",
+			"back": "Upper_door_closer",
+			"left": "Upper_main_right_turn",
+			"right": "Upper_main_left_turn"
 		}
 	},
 	"Upper_middle_forward_1": {
@@ -208,14 +218,24 @@ var current_room = "Opening_first"
 func _ready() -> void:
 	load_room()
 
-func move(direction):
-	var exits = rooms[current_room]["exits"]
+var is_changing_room = false
 
+func move(direction):
+	if is_changing_room:
+		return
+		
+	is_changing_room = true
+	var exits = rooms[current_room]["exits"]
+	
 	if exits.has(direction):
 		current_room = exits[direction]
+		print("new room:", current_room)
 		load_room()
 	else:
 		print("No room in that direction")
+		
+	await get_tree().process_frame
+	is_changing_room = false
 
 func load_room():
 	var scene_path = rooms[current_room]["scene"]
