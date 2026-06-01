@@ -1,5 +1,6 @@
 extends Node2D
 
+var passed = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,5 +13,9 @@ func _ready() -> void:
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			$TextureRect.visible = false
-			$revealed.visible = true
+			var minigame = load("res://memoryGame.tscn")
+			var init = minigame.instantiate()
+			self.add_child(init)
+			
+			$TextureRect.visible = !passed
+			$revealed.visible = passed
