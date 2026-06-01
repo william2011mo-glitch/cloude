@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://duoa2ahkkryrw"]
+
+[ext_resource type="Texture2D" uid="uid://btlvjpcsh4ssm" path="res://MapAssets/4g Turned Around Left of Table MR.png" id="1_pcooi"]
+
+[node name="UpperMiddleRoomForwardOne" type="Node2D" unique_id=1042765874]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=125069862]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_pcooi")
+expand_mode = 3

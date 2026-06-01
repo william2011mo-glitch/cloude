@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://clgeyh78pjeje"]
+[gd_scene format=3 uid="uid://clgeyh78pjeje"]
 
 [ext_resource type="Texture2D" uid="uid://g5pqjeftq60s" path="res://MapAssets/4l Right door MR.png" id="1_bimme"]
 
-[node name="UpperMiddleRightTurnLeaving" type="Node2D"]
+[node name="UpperMiddleRightTurnLeaving" type="Node2D" unique_id=122978093]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=713527482]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_bimme")

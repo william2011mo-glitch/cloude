@@ -1,11 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://di34jg5802mmp"]
+[gd_scene format=3 uid="uid://di34jg5802mmp"]
 
+[ext_resource type="Script" uid="uid://cv12prcttqd5k" path="res://RoomScenes/upper_middle_forward_final.gd" id="1_00wrs"]
 [ext_resource type="Texture2D" uid="uid://y8sc7bvm4hvw" path="res://MapAssets/4j Close to door near 2 boys MR.png" id="1_yt8dq"]
 
-[node name="UpperMiddleForwardFinal" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dikm"]
+size = Vector2(475, 834.5)
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="UpperMiddleForwardFinal" type="Node2D" unique_id=276004491]
+script = ExtResource("1_00wrs")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=595869705]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_yt8dq")
 expand_mode = 3
+
+[node name="door_yes" type="Area2D" parent="." unique_id=1843518695]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door_yes" unique_id=768586433]
+position = Vector2(919.5, 638.75)
+shape = SubResource("RectangleShape2D_2dikm")
+
+[connection signal="input_event" from="door_yes" to="." method="_on_door_yes_input_event"]
