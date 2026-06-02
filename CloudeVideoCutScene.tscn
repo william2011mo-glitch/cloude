@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dy675xhxdesef"]
+[gd_scene format=3 uid="uid://dy675xhxdesef"]
 
 [ext_resource type="Script" uid="uid://37xqoncilp1s" path="res://Intro/CloudVideoCutScene/CloudeVideoCutScene.gd" id="1_cutscene"]
 [ext_resource type="VideoStream" uid="uid://c0lcuacwluxcl" path="res://Intro/CloudVideoCutScene/CloudeVideoRecordingFINAL.ogv" id="2_ltnqa"]
 
-[node name="CloudeVideoCutScene" type="Control"]
+[node name="CloudeVideoCutScene" type="Control" unique_id=1802474282]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,19 +12,26 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cutscene")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-layout_mode = 0
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=218308216]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -133.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("2_ltnqa")
 expand = true
 
-[node name="ClickArea" type="Control" parent="."]
-anchors_preset = 0
+[node name="ClickArea" type="Control" parent="." unique_id=1906370971]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1581.0
+offset_top = 856.0
+offset_right = -43.0
+offset_bottom = -81.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_default_cursor_shape = 2
