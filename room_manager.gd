@@ -192,7 +192,7 @@ var rooms = {
 	"Small_pot_right_2": {
 		"scene": "res://RoomScenes/upper_small_fancy_room_2right.tscn",
 		"exits": {
-			"forward": "Smaller_room",
+			"forward": "Upper_middle_right_leaving",
 			"back": "Leaving_morning_room_right_2"
 		}
 	},
