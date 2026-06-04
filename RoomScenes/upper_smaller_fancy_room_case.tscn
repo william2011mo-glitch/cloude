@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bv8xpeaycny05"]
+[gd_scene format=3 uid="uid://bv8xpeaycny05"]
 
-[ext_resource type="Texture2D" uid="uid://cmxcas3lk0mhb" path="res://MapAssets/7d First case of porcelain PR CLOSED.png" id="1_c1lrd"]
+[ext_resource type="Texture2D" uid="uid://dca4pq03bkcar" path="res://BW Museum Photos PNG/BW7d First case of porcelain PR CLOSED copy.png" id="1_c1lrd"]
 
-[node name="UpperSmallerFancyRoomCase" type="Node2D"]
+[node name="UpperSmallerFancyRoomCase" type="Node2D" unique_id=603611235]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1872597415]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_c1lrd")

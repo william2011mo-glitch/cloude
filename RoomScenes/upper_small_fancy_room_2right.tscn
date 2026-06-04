@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0kylvq3n5jug"]
+[gd_scene format=3 uid="uid://d0kylvq3n5jug"]
 
-[ext_resource type="Texture2D" uid="uid://dyjnk0toq0usp" path="res://MapAssets/6h right door going out Small DR.png" id="1_cvv64"]
+[ext_resource type="Texture2D" uid="uid://bifyowpdb10sa" path="res://BW Museum Photos PNG/BW6h right door going out Small DR copy.png" id="1_cvv64"]
 
-[node name="UpperSmallFancyRoom2Right" type="Node2D"]
+[node name="UpperSmallFancyRoom2Right" type="Node2D" unique_id=1542223751]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=278014388]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_cvv64")

@@ -1,32 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://b27qpp530ugxf"]
+[gd_scene format=3 uid="uid://b27qpp530ugxf"]
 
-[ext_resource type="Texture2D" uid="uid://blv7ect88m48w" path="res://MapAssets/6d Small DR pot.png" id="1_x1bp0"]
 [ext_resource type="Script" uid="uid://c8cntmoquf3qu" path="res://RoomScenes/upper_small_fancy_room_pot.gd" id="1_xf7ov"]
-[ext_resource type="Texture2D" uid="uid://b5iuwt833livk" path="res://MapAssets/6e Small DR pot IS OPENED WITH DIAMOND.png" id="3_g2e54"]
+[ext_resource type="Texture2D" uid="uid://cu8rrochg3b3y" path="res://BW Museum Photos PNG/BW6d Small DR pot copy.png" id="2_xf7ov"]
+[ext_resource type="Texture2D" uid="uid://bhgbnx2o7uh83" path="res://BW Museum Photos PNG/BW6e Small DR pot IS OPENED WITH DIAMOND copy.png" id="3_g2e54"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2aucn"]
 radius = 225.0
 height = 544.0
 
-[node name="UpperSmallFancyRoomPot" type="Node2D"]
+[node name="UpperSmallFancyRoomPot" type="Node2D" unique_id=469784083]
 script = ExtResource("1_xf7ov")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=972590518]
 offset_right = 1919.0
 offset_bottom = 1081.0
-texture = ExtResource("1_x1bp0")
+texture = ExtResource("2_xf7ov")
 expand_mode = 3
 
-[node name="revealed" type="TextureRect" parent="."]
+[node name="revealed" type="TextureRect" parent="." unique_id=2053408711]
 visible = false
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("3_g2e54")
 expand_mode = 3
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=261809920]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1022279161]
 position = Vector2(936, 619)
 scale = Vector2(1.5740516, 0.9440488)
 shape = SubResource("CapsuleShape2D_2aucn")

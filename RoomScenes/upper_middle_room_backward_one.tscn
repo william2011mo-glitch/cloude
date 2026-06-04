@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://duoa2ahkkryrw"]
 
-[ext_resource type="Texture2D" uid="uid://btlvjpcsh4ssm" path="res://MapAssets/4g Turned Around Left of Table MR.png" id="1_pcooi"]
+[ext_resource type="Texture2D" uid="uid://bx242hiiemomx" path="res://BW Museum Photos PNG/BW4g Turned Around Left of Table MR copy.png" id="1_pcooi"]
 
 [node name="UpperMiddleRoomForwardOne" type="Node2D" unique_id=1042765874]
 

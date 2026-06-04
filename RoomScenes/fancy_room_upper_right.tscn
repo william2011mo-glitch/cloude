@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cno4v7hmorjfr"]
 
-[ext_resource type="Texture2D" uid="uid://dg8usayn7ld7n" path="res://MapAssets/5d Great DR -_ Small DR.png" id="1_k0yi3"]
 [ext_resource type="Script" uid="uid://cx70do5anyhif" path="res://RoomScenes/fancy_room_upper_right.gd" id="1_xpbyt"]
+[ext_resource type="Texture2D" uid="uid://b2tjakk08iil4" path="res://BW Museum Photos PNG/BW5d Great DR -_ Small DR copy.png" id="2_xpbyt"]
 
 [node name="FancyRoomUpperRight" type="Node2D" unique_id=1675592087]
 script = ExtResource("1_xpbyt")
@@ -9,7 +9,7 @@ script = ExtResource("1_xpbyt")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1502954775]
 offset_right = 1919.0
 offset_bottom = 1081.0
-texture = ExtResource("1_k0yi3")
+texture = ExtResource("2_xpbyt")
 expand_mode = 3
 
 [node name="door_this_one" type="Area2D" parent="." unique_id=1694426175]

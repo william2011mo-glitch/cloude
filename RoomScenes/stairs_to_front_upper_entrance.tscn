@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://uh5f86t3oopo"]
 
-[ext_resource type="Texture2D" uid="uid://dgoghngtbe0j8" path="res://MapAssets/3a The Upper Floor Entrance.png" id="1_ec311"]
 [ext_resource type="Script" uid="uid://dm1if1t7ytql0" path="res://RoomScenes/stairs_to_front_upper_entrance.gd" id="1_egirf"]
+[ext_resource type="Texture2D" uid="uid://crdlfrhpi4vp0" path="res://BW Museum Photos PNG/BW3a The Upper Floor Entrance copy.png" id="2_egirf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tihn1"]
 size = Vector2(262, 153)
@@ -15,7 +15,7 @@ script = ExtResource("1_egirf")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1557596379]
 offset_right = 1919.0
 offset_bottom = 1081.0
-texture = ExtResource("1_ec311")
+texture = ExtResource("2_egirf")
 expand_mode = 3
 
 [node name="chest" type="Area2D" parent="." unique_id=1151696664]

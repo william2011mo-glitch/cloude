@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d71hscok6gpj"]
 
 [ext_resource type="Script" uid="uid://8x164e1ltysv" path="res://RoomScenes/upper_middle_room_turned_around.gd" id="1_mr4f8"]
-[ext_resource type="Texture2D" uid="uid://bjarmr0416kbj" path="res://MapAssets/4f Turned Around Opposide MR.png" id="2_mr4f8"]
+[ext_resource type="Texture2D" uid="uid://blbpyqd1871dj" path="res://BW Museum Photos PNG/BW4f Turned Around Opposide MR copy.png" id="2_mr4f8"]
 
 [node name="upper_middle_room_turned_around" type="Node2D" unique_id=239581758]
 script = ExtResource("1_mr4f8")

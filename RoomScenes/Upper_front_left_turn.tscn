@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4fogiav4cmd5"]
+[gd_scene format=3 uid="uid://d4fogiav4cmd5"]
 
-[ext_resource type="Texture2D" uid="uid://cswhhc8bpwprx" path="res://MapAssets/3c Turn toward left door UV.png" id="1_tt4o1"]
+[ext_resource type="Texture2D" uid="uid://cfw2jh6pvcy01" path="res://BW Museum Photos PNG/BW3c Turn toward left door UV copy.png" id="1_tt4o1"]
 
-[node name="UpperFrontLeftTurn" type="Node2D"]
+[node name="UpperFrontLeftTurn" type="Node2D" unique_id=1488482119]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1510166399]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_tt4o1")

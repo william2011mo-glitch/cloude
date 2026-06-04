@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://vsgxsgdw8cmi"]
+[gd_scene format=3 uid="uid://vsgxsgdw8cmi"]
 
-[ext_resource type="Texture2D" uid="uid://doou20s3h5ksq" path="res://MapAssets/3e Close to Right door UV.png" id="1_t4508"]
+[ext_resource type="Texture2D" uid="uid://yruk30gea16n" path="res://BW Museum Photos PNG/BW3e Close to Right door UV copy.png" id="1_t4508"]
 
-[node name="UpperFrontRightTurn" type="Node2D"]
+[node name="UpperFrontRightTurn" type="Node2D" unique_id=1160567953]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1082742905]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_t4508")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b70fhcoxsn5gb"]
 
-[ext_resource type="Texture2D" uid="uid://l0g08r7r7son" path="res://MapAssets/5e Small DR -_ Great DR.png" id="1_bilbq"]
+[ext_resource type="Texture2D" uid="uid://d3f03ye6oev0j" path="res://BW Museum Photos PNG/BW5e Small DR -_ Great DR copy 2.png" id="1_bilbq"]
 
 [node name="UpperRightSmallFancyRoomEntrance" type="Node2D" unique_id=576108983]
 

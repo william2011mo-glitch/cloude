@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddvtdfylbsole"]
+[gd_scene format=3 uid="uid://ddvtdfylbsole"]
 
-[ext_resource type="Texture2D" uid="uid://bnhwqjj1jmyru" path="res://MapAssets/1a Opening.png" id="1_coxio"]
+[ext_resource type="Texture2D" uid="uid://clavmo50hixy2" path="res://BW Museum Photos PNG/BW1a Opening.png" id="1_coxio"]
 
-[node name="Opening_center" type="Node2D"]
+[node name="Opening_center" type="Node2D" unique_id=350846634]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=597164763]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_coxio")

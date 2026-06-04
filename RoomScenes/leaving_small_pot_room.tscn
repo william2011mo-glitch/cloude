@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjnba3w3h6p0f"]
+[gd_scene format=3 uid="uid://cjnba3w3h6p0f"]
 
-[ext_resource type="Texture2D" uid="uid://0vqmflmofv7d" path="res://MapAssets/6f Turned Around.png" id="1_ptxfo"]
+[ext_resource type="Texture2D" uid="uid://bp7fho0q3623d" path="res://BW Museum Photos PNG/BW6f Turned Around copy.png" id="1_ptxfo"]
 
-[node name="LeavingSmallPotRoom" type="Node2D"]
+[node name="LeavingSmallPotRoom" type="Node2D" unique_id=757854476]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=609899839]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_ptxfo")

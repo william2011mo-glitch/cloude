@@ -1,11 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://y4uprgu7bojh"]
+[gd_scene format=3 uid="uid://y4uprgu7bojh"]
 
-[ext_resource type="Texture2D" uid="uid://c4au6xewtfmq8" path="res://MapAssets/6c Small DR turn to right.png" id="1_topjl"]
+[ext_resource type="Texture2D" uid="uid://cegdhrjtmptss" path="res://BW Museum Photos PNG/BW6c Small DR turn to right copy.png" id="1_6putq"]
 
-[node name="UpperRightSmallFancyRoomLeft" type="Node2D"]
+[node name="UpperRightSmallFancyRoomLeft" type="Node2D" unique_id=233379499]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1408798502]
 offset_right = 1919.0
 offset_bottom = 1081.0
-texture = ExtResource("1_topjl")
+texture = ExtResource("1_6putq")
 expand_mode = 3

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://chbp01g4dvbme"]
 
-[ext_resource type="Texture2D" uid="uid://00ebmlugw4b4" path="res://MapAssets/4i Right of Table MR.png" id="1_faf4m"]
+[ext_resource type="Texture2D" uid="uid://tf267b7uhwrm" path="res://BW Museum Photos PNG/BW4i Right of Table MR copy.png" id="1_faf4m"]
 
 [node name="UpperMiddleRoomForwardOne" type="Node2D" unique_id=2073027077]
 

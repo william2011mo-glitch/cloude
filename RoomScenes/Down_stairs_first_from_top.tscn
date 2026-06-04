@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cpxd4vso44nm3"]
 
-[ext_resource type="Texture2D" uid="uid://cnnjbntjedup" path="res://MapAssets/2d Down stairs 1.png" id="1_r8cpg"]
+[ext_resource type="Texture2D" uid="uid://cvrh6fvik3did" path="res://BW Museum Photos PNG/BW2d Down stairs 1 copy.png" id="1_r8cpg"]
 
 [node name="DownStairsFirstFromTop" type="Node2D" unique_id=916132574]
 

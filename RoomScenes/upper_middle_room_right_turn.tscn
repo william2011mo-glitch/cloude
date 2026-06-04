@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5t5rjpgt75od"]
 
-[ext_resource type="Texture2D" uid="uid://c7y2aaluv4pdu" path="res://MapAssets/4d Morning Room Close to Door.png" id="1_f2yg1"]
+[ext_resource type="Texture2D" uid="uid://b6sq4es0u22cd" path="res://BW Museum Photos PNG/BW4d Morning Room Close to Door copy.png" id="1_f2yg1"]
 
 [node name="UpperMiddleRoomRightTurn" type="Node2D" unique_id=1383762139]
 

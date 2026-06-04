@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://86rd47up2ki"]
+[gd_scene format=3 uid="uid://86rd47up2ki"]
 
-[ext_resource type="Texture2D" uid="uid://66f33bg73jb" path="res://MapAssets/5a First Step in the Great DR.png" id="1_hnpmx"]
+[ext_resource type="Texture2D" uid="uid://bfvjalsawgaki" path="res://BW Museum Photos PNG/BW5a First Step in the Great DR copy.png" id="1_hnpmx"]
 
-[node name="FancyRoomUpperFirst" type="Node2D"]
+[node name="FancyRoomUpperFirst" type="Node2D" unique_id=1311395285]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=988789109]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_hnpmx")

@@ -1,11 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dup6p16hcyyvf"]
+[gd_scene format=3 uid="uid://dup6p16hcyyvf"]
 
-[ext_resource type="Texture2D" uid="uid://cjuonepo1lye3" path="res://MapAssets/1b Turn to Right.png" id="1_ffe4f"]
+[ext_resource type="Texture2D" uid="uid://cd1m3s7lmi7gn" path="res://BW Museum Photos PNG/BW1b Turn to Right copy.png" id="1_p788u"]
 
-[node name="OpeningRight" type="Node2D"]
+[node name="OpeningRight" type="Node2D" unique_id=880049194]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=309743357]
 offset_right = 1919.0
 offset_bottom = 1081.0
-texture = ExtResource("1_ffe4f")
+texture = ExtResource("1_p788u")
 expand_mode = 3

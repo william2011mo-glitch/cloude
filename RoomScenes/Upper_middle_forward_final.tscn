@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://di34jg5802mmp"]
 
 [ext_resource type="Script" uid="uid://cv12prcttqd5k" path="res://RoomScenes/upper_middle_forward_final.gd" id="1_00wrs"]
-[ext_resource type="Texture2D" uid="uid://y8sc7bvm4hvw" path="res://MapAssets/4j Close to door near 2 boys MR.png" id="1_yt8dq"]
+[ext_resource type="Texture2D" uid="uid://cb7q4bldd7tn2" path="res://BW Museum Photos PNG/BW4j Close to door near 2 boys MR copy.png" id="2_00wrs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dikm"]
 size = Vector2(475, 834.5)
@@ -12,7 +12,7 @@ script = ExtResource("1_00wrs")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=595869705]
 offset_right = 1919.0
 offset_bottom = 1081.0
-texture = ExtResource("1_yt8dq")
+texture = ExtResource("2_00wrs")
 expand_mode = 3
 
 [node name="door_yes" type="Area2D" parent="." unique_id=1843518695]
