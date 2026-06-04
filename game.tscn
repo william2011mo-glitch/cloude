@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://bblvw405g7t8s"]
 
 [ext_resource type="Script" uid="uid://bakn6si4c4dnd" path="res://game.gd" id="1_fc0e3"]
-[ext_resource type="Texture2D" uid="uid://yvabttlgfc1l" path="res://LeftArrow.png" id="2_fc0e3"]
-[ext_resource type="Texture2D" uid="uid://i4r80tfsq25t" path="res://RightArrow.png" id="3_7jktm"]
+[ext_resource type="Texture2D" uid="uid://bs2foq52e0exe" path="res://BWArrow.png" id="3_fc0e3"]
 [ext_resource type="Script" uid="uid://brvkqmeuxeu2v" path="res://room_manager.gd" id="3_feb5d"]
 
 [node name="Game" type="Node2D" unique_id=1120339574]
@@ -12,38 +11,38 @@ script = ExtResource("1_fc0e3")
 script = ExtResource("3_feb5d")
 
 [node name="LeftArrow" type="TextureRect" parent="." unique_id=1873063836]
-offset_left = 26.0
-offset_top = 459.0
-offset_right = 226.0
-offset_bottom = 659.0
-scale = Vector2(1.4950001, 1.4950001)
-texture = ExtResource("2_fc0e3")
+offset_left = 303.0
+offset_top = 474.0
+offset_right = 2691.0
+offset_bottom = 2142.0
+scale = Vector2(-0.12, 0.12)
+texture = ExtResource("3_fc0e3")
 
 [node name="RightArrow" type="TextureRect" parent="." unique_id=292014103]
-offset_left = 1634.9999
-offset_top = 448.0
-offset_right = 1834.9999
-offset_bottom = 648.0
-scale = Vector2(1.525, 1.525)
-texture = ExtResource("3_7jktm")
+offset_left = 1630.0
+offset_top = 472.0
+offset_right = 4018.0
+offset_bottom = 2140.0
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_fc0e3")
 
 [node name="BackArrow" type="TextureRect" parent="." unique_id=26046486]
-offset_left = 1122.0
-offset_top = 856.9999
-offset_right = 1322.0
-offset_bottom = 1056.9999
-rotation = 1.5507374
-scale = Vector2(1.1923218, 1.3567266)
-texture = ExtResource("3_7jktm")
+offset_left = 1087.0001
+offset_top = 791.0
+offset_right = 3475.0
+offset_bottom = 2459.0
+rotation = 1.5707964
+scale = Vector2(0.12, 0.137)
+texture = ExtResource("3_fc0e3")
 
 [node name="ForwardArrow" type="TextureRect" parent="." unique_id=206064049]
-offset_left = 1110.0
-offset_top = 281.0
-offset_right = 1310.0
-offset_bottom = 481.0
-rotation = 1.5507374
-scale = Vector2(-1.5663809, 1.3567266)
-texture = ExtResource("3_7jktm")
+offset_left = 893.0
+offset_top = 272.00003
+offset_right = 3281.0
+offset_bottom = 1940.0
+rotation = 4.712389
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_fc0e3")
 
 [connection signal="gui_input" from="LeftArrow" to="." method="_on_left_arrow_gui_input"]
 [connection signal="gui_input" from="RightArrow" to="." method="_on_right_arrow_gui_input"]
