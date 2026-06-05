@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bgiuhpnr4vg08"]
+
+[ext_resource type="Texture2D" uid="uid://d2krv1t5mwn6m" path="res://BW Museum Photos PNG/BW7e Turned Around From Case copy.png" id="1_g0by0"]
+
+[node name="UpperSmallerFancyRoomLeftTurned" type="Node2D" unique_id=1257291975]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1819724741]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_g0by0")
+expand_mode = 3

@@ -60,8 +60,8 @@ var rooms = {
 	"Upper_main_left_turn": {
 		"scene": "res://RoomScenes/Upper_front_left_turn.tscn",
 		"exits": {
-			"back": "Upper_main_left_turn_then_around"
-			# "door thing": "upper_smaller_fancy_room or smth like that"
+			"back": "Upper_main_left_turn_then_around",
+			"door_thing": "Smaller_room"
 		}
 	},
 	
@@ -202,13 +202,26 @@ var rooms = {
 		"scene": "res://RoomScenes/upper_smaller_fancy_room_first.tscn",
 		"exits": {
 			"back": "Small_pot_right_2",
-			"right": "case"
+			"left": "Smaller_room_left"
+		}
+	},
+	"Smaller_room_left": {
+		"scene": "res://RoomScenes/upper_smaller_fancy_room_left.tscn",
+		"exits": {
+			"back": "Smaller_room_left_turned",
+			"forward": "case"
+		}
+	},
+	"Smaller_room_left_turned": {
+		"scene": "res://RoomScenes/upper_smaller_fancy_room_case_turned.tscn",
+		"exits": {
+			"back": "case"
 		}
 	},
 	"case": {
 		"scene": "res://RoomScenes/upper_smaller_fancy_room_case.tscn",
 		"exits": {
-			"back": "Smaller_room",
+			"back": "Smaller_room_left_turned"
 		}
 	},
 	
