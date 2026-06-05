@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://s3dhyhbqe6fu"]
+[gd_scene format=3 uid="uid://s3dhyhbqe6fu"]
 
-[ext_resource type="Texture2D" uid="uid://cd8bnwbydvsuu" path="res://MapAssets/2b Up the Stairs Part 2.png" id="1_ouxux"]
+[ext_resource type="Texture2D" uid="uid://dpqkfbd0miy6e" path="res://BW Museum Photos PNG/BW2b Up the Stairs Part 2 copy.png" id="1_ouxux"]
 
-[node name="UpStairs" type="Node2D"]
+[node name="UpStairs" type="Node2D" unique_id=307679933]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1155097037]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_ouxux")

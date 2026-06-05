@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://d3jvslu8tgwlf"]
 
 [ext_resource type="Texture2D" uid="uid://82h3l2k1fywu" path="res://BW Museum Photos PNG/BW6b Small DR turn to left copy.png" id="1_ea1xw"]
+[ext_resource type="Script" uid="uid://hn3b5n2tq13d" path="res://RoomScenes/upper_right_small_fancy_room.gd" id="1_twtan"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ea1xw"]
 radius = 30.0
 height = 92.0
 
 [node name="UpperRightSmallFancyRoom" type="Node2D" unique_id=1945850224]
+script = ExtResource("1_twtan")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1919781978]
 offset_right = 1919.0
@@ -16,7 +18,9 @@ expand_mode = 3
 
 [node name="Area2D" type="Area2D" parent="." unique_id=783681692]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=293843125]
+[node name="pot_from_far" type="CollisionShape2D" parent="Area2D" unique_id=293843125]
 position = Vector2(871, 731)
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_ea1xw")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
