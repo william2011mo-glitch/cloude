@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://c782o51eectyn"]
 
 [ext_resource type="Texture2D" uid="uid://ctir6fyqs7ph0" path="res://BW Museum Photos PNG/BW3h coming back from the left door copy.png" id="1_0j5yc"]
+[ext_resource type="Script" uid="uid://dxhqhipbbd8f3" path="res://RoomScenes/upper_front_left_turned_around.gd" id="1_ppage"]
 
 [node name="UpperFrontLeftTurn" type="Node2D" unique_id=1488482119]
+script = ExtResource("1_ppage")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1510166399]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_0j5yc")
 expand_mode = 3
+
+[node name="Area2D" type="Area2D" parent="." unique_id=538246385]
+
+[node name="chest" type="CollisionPolygon2D" parent="Area2D" unique_id=1776687979]
+position = Vector2(10, 943)
+polygon = PackedVector2Array(-12, -12, 496, -231, 608, -198, 619, -44, 263, 256, -8, 253)
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

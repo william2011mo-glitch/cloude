@@ -61,13 +61,16 @@ var rooms = {
 		"scene": "res://RoomScenes/Upper_front_left_turn.tscn",
 		"exits": {
 			"back": "Upper_main_left_turn_then_around"
+			# "door thing": "upper_smaller_fancy_room or smth like that"
 		}
 	},
 	
 	"Upper_main_left_turn_then_around": {
 		"scene": "res://RoomScenes/Upper_front_left_turned_around.tscn",
 		"exits": {
-			"back": "Upper_main_left_turn"
+			"back": "Upper_main_left_turn",
+			"forward": "Upper_main",
+			"chest": "chest"
 		}
 	},
 	
