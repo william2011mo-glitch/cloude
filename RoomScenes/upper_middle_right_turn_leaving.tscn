@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clgeyh78pjeje"]
 
-[ext_resource type="Texture2D" uid="uid://g5pqjeftq60s" path="res://MapAssets/4l Right door MR.png" id="1_bimme"]
+[ext_resource type="Texture2D" uid="uid://d2xrcvgi6diab" path="res://BW Museum Photos PNG/BW4l Right door MR copy.png" id="1_bimme"]
 
 [node name="UpperMiddleRightTurnLeaving" type="Node2D" unique_id=122978093]
 

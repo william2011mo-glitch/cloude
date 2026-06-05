@@ -131,7 +131,7 @@ var rooms = {
 		"scene": "res://RoomScenes/upper_middle_room_right_turn.tscn",
 		"exits": {
 			"left": "Upper_middle_forward_2",
-			"back": "Upper_middle_right_leaving"
+			"back": "Upper_middle_right_leavingx"
 		}
 	},
 	"Upper_middle_right_leaving": {
