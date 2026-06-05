@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dj3oikun6mjq4"]
+
+[ext_resource type="Texture2D" path="res://BW Museum Photos PNG/BW3e Close to Right door UV copy.png" id="1_t4508"]
+
+[node name="UpperFrontRightTurn" type="Node2D" unique_id=1160567953]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1082742905]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_t4508")
+expand_mode = 3
