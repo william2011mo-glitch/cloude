@@ -36,7 +36,6 @@ var rooms = {
 		"scene": "res://RoomScenes/stairs_to_front_upper_entrance.tscn",
 		"exits": {
 			"left": "Upper_main_left_turn",
-			"right": "Upper_main_right_turn",
 			"back": "Down_stairs_2",
 			"chest": "chest",
 			"middle_door": "Upper_door_closer"
@@ -61,16 +60,20 @@ var rooms = {
 	"Upper_main_left_turn": {
 		"scene": "res://RoomScenes/Upper_front_left_turn.tscn",
 		"exits": {
-			"back": "Upper_main"
+			"back": "Upper_main_left_turn_then_around"
+			# "door thing": "upper_smaller_fancy_room or smth like that"
 		}
 	},
 	
-	"Upper_main_right_turn": {
-		"scene": "res://RoomScenes/Upper_front_right_turn.tscn",
+	"Upper_main_left_turn_then_around": {
+		"scene": "res://RoomScenes/Upper_front_left_turned_around.tscn",
 		"exits": {
-			"back": "Upper_main"
+			"back": "Upper_main_left_turn",
+			"forward": "Upper_main",
+			"chest": "chest"
 		}
 	},
+	
 	"Upper_middle_room_enter": {
 		"scene": "res://RoomScenes/upper_middle_entered_first.tscn",
 		"exits": {
@@ -91,7 +94,6 @@ var rooms = {
 		"exits": {
 			"forward": "Down_stairs_2",
 			"back": "Upper_door_closer",
-			"left": "Upper_main_right_turn",
 			"right": "Upper_main_left_turn"
 		}
 	},
@@ -173,7 +175,7 @@ var rooms = {
 		"scene": "res://RoomScenes/upper_right_small_fancy_room.tscn",
 		"exits": {
 			"right": "Small_pot_room_right",
-			"forward": "pot",
+			"pot_from_far": "pot",
 		}
 	},
 	"pot": {
