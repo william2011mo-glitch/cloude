@@ -20,10 +20,6 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADconfig/name="ArrayTraversalMinigame"
 
-[autoload]
-
-Global="*uid://drpgchy16rx15"
-
 [display]
 
 window/size/viewport_width=1920
