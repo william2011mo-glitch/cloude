@@ -161,8 +161,15 @@ var rooms = {
 	"Big_DR_enter": {
 		"scene": "res://RoomScenes/fancy_room_upper_first.tscn",
 		"exits": {
+			"gold_statue": "Big_DR_golden_baby",
 			"back": "Upper_middle_forward_final",
-			#"forward": "Golden_Baby",
+			"right": "Big_DR_right"
+		}
+	},
+	"Big_DR_golden_baby": {
+		"scene": "res://RoomScenes/Upper_big_fancy_golden_baby.tscn",
+		"exits": {
+			"back": "Big_DR_enter",
 			"right": "Big_DR_right"
 		}
 	},
@@ -177,6 +184,7 @@ var rooms = {
 		"scene": "res://RoomScenes/fancy_upper_right_leaving.tscn",
 		"exits": {
 			"back": "Big_DR_right",
+			"golden_child": "Big_DR_golden_baby",
 			"left": "Big_DR_enter",
 		}
 	},

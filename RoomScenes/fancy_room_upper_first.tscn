@@ -1,11 +1,25 @@
 [gd_scene format=3 uid="uid://86rd47up2ki"]
 
 [ext_resource type="Texture2D" uid="uid://bfvjalsawgaki" path="res://BW Museum Photos PNG/BW5a First Step in the Great DR copy.png" id="1_hnpmx"]
+[ext_resource type="Script" uid="uid://b8w5p2dvrrugo" path="res://RoomScenes/fancy_room_upper_first.gd" id="1_y63c0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y63c0"]
+radius = 43.0
+height = 132.0
 
 [node name="FancyRoomUpperFirst" type="Node2D" unique_id=1311395285]
+script = ExtResource("1_y63c0")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=988789109]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_hnpmx")
 expand_mode = 3
+
+[node name="gold_statue" type="Area2D" parent="." unique_id=1232567301]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gold_statue" unique_id=1500573152]
+position = Vector2(1049, 250)
+shape = SubResource("CapsuleShape2D_y63c0")
+
+[connection signal="input_event" from="gold_statue" to="." method="_on_gold_statue_input_event"]
