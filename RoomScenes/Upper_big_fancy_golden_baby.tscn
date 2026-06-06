@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c2jqcg1hjhjtl"]
+
+[ext_resource type="Texture2D" uid="uid://qxmtacqdkjmo" path="res://BW Museum Photos PNG/BW5b Golden Baby copy.png" id="1_cg7s3"]
+
+[node name="DownStairsFirstFromTop" type="Node2D" unique_id=916132574]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1791260253]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_cg7s3")
+expand_mode = 3
