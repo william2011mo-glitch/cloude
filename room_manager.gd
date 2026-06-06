@@ -137,6 +137,7 @@ var rooms = {
 	"Upper_middle_right": {
 		"scene": "res://RoomScenes/upper_middle_room_right_turn.tscn",
 		"exits": {
+			"door_im_done_with_naming": "Smaller_room_to_small_room",
 			"left": "Upper_middle_forward_2",
 			"back": "Upper_middle_right_leaving"
 		}
@@ -203,7 +204,7 @@ var rooms = {
 	"Small_pot_right_2": {
 		"scene": "res://RoomScenes/upper_small_fancy_room_2right.tscn",
 		"exits": {
-			"forward": "Upper_middle_right_leaving",
+			"door_um": "Upper_middle_right_leaving",
 			"back": "Smaller_room_to_small_room"
 		}
 	},

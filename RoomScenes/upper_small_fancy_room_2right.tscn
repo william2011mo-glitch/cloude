@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://d0kylvq3n5jug"]
 
 [ext_resource type="Texture2D" uid="uid://bifyowpdb10sa" path="res://BW Museum Photos PNG/BW6h right door going out Small DR copy.png" id="1_cvv64"]
+[ext_resource type="Script" uid="uid://escd2y08lk2b" path="res://RoomScenes/upper_small_fancy_room_2_right.gd" id="1_t1m2s"]
 
 [node name="UpperSmallFancyRoom2Right" type="Node2D" unique_id=1542223751]
+script = ExtResource("1_t1m2s")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=278014388]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_cvv64")
 expand_mode = 3
+
+[node name="door_um" type="Area2D" parent="." unique_id=269477704]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="door_um" unique_id=319691580]
+position = Vector2(1045, 213)
+polygon = PackedVector2Array(-36, -25, 325, -26, 312, 807, -38, 782)
+
+[connection signal="input_event" from="door_um" to="." method="_on_door_um_input_event"]
