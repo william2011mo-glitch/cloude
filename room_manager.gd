@@ -82,6 +82,13 @@ var rooms = {
 			"right": "Upper_middle_forward_2"
 		}
 	},
+	"Two_boys": {
+		"scene": "res://RoomScenes/upper_middle_two_boys.tscn",
+		"exits": {
+			"back": "Upper_middle_room_opposite",
+			"right": "Upper_middle_forward_final"
+		}
+	},
 	"Upper_middle_room_turned": {
 		"scene": "res://RoomScenes/upper_middle_room_turned_around.tscn",
 		"exits": {
@@ -131,7 +138,7 @@ var rooms = {
 		"scene": "res://RoomScenes/upper_middle_room_right_turn.tscn",
 		"exits": {
 			"left": "Upper_middle_forward_2",
-			"back": "Upper_middle_right_leavingx"
+			"back": "Upper_middle_right_leaving"
 		}
 	},
 	"Upper_middle_right_leaving": {
@@ -145,7 +152,8 @@ var rooms = {
 		"scene": "res://RoomScenes/Upper_middle_forward_final.tscn",
 		"exits": {
 			"door_yes": "Big_DR_enter",
-			"back": "Upper_middle_room_opposite"
+			"back": "Upper_middle_room_opposite",
+			"boy_painting": "Two_boys"
 		}
 	},
 	
@@ -176,6 +184,7 @@ var rooms = {
 		"exits": {
 			"right": "Small_pot_room_right",
 			"pot_from_far": "pot",
+			"back": "Small_room_turned_around"
 		}
 	},
 	"pot": {
@@ -195,13 +204,35 @@ var rooms = {
 		"scene": "res://RoomScenes/upper_small_fancy_room_2right.tscn",
 		"exits": {
 			"forward": "Upper_middle_right_leaving",
-			"back": "Leaving_morning_room_right_2"
+			"back": "Smaller_room_to_small_room"
+		}
+	},
+	"Smaller_room_to_small_room": {
+		"scene": "res://RoomScenes/upper_small_fancy_room_leaving_to_small_room_1.tscn",
+		"exits": {
+			"forward": "Smaller_room_to_small_room_step",
+			"back": "Small_pot_right_2"
+		}
+	},
+	"Smaller_room_to_small_room_step": {
+		"scene": "res://RoomScenes/upper_small_leaving_to_small_2.tscn",
+		"exits": {
+			"left": "Small_room_turned_around",
+			"right": "Small_pot_room",
+			"back": "Small_pot_room_right"
+		}
+	},
+	"Small_room_turned_around": {
+		"scene": "res://RoomScenes/upper_small_turned_around.tscn",
+		"exits": {
+			"door_idk": "Big_DR_leaving",
+			"back": "Small_pot_room"
 		}
 	},
 	"Smaller_room": {
 		"scene": "res://RoomScenes/upper_smaller_fancy_room_first.tscn",
 		"exits": {
-			"back": "Small_pot_right_2",
+			"back": "the turn back that shira took a picture of",
 			"left": "Smaller_room_left"
 		}
 	},

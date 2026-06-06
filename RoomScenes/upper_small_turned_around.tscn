@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://rcl3ot6jmps6"]
+
+[ext_resource type="Script" uid="uid://dnawvpdturk0f" path="res://RoomScenes/upper_small_turned_around.gd" id="1_372da"]
+[ext_resource type="Texture2D" uid="uid://bp7fho0q3623d" path="res://BW Museum Photos PNG/BW6f Turned Around copy.png" id="1_tutu7"]
+
+[node name="UpperSmallerLeavingToSmall2" type="Node2D" unique_id=1633576530]
+script = ExtResource("1_372da")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=26997821]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_tutu7")
+expand_mode = 3
+
+[node name="door_idk" type="Area2D" parent="." unique_id=1726339495]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="door_idk" unique_id=1783717561]
+position = Vector2(867, 224)
+polygon = PackedVector2Array(-11, -12, 488, -44, 530, 857, -24, 858)
+
+[connection signal="input_event" from="door_idk" to="." method="_on_door_idk_input_event"]
