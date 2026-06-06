@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cjnba3w3h6p0f"]
+[gd_scene format=3 uid="uid://bhdxkddys21qa"]
 
-[ext_resource type="Texture2D" uid="uid://bp7fho0q3623d" path="res://BW Museum Photos PNG/BW6f Turned Around copy.png" id="1_ptxfo"]
+[ext_resource type="Texture2D" uid="uid://co21fr2bsjpro" path="res://BW Museum Photos PNG/BW6f Turned Around copy.png" id="1_ptxfo"]
 
 [node name="LeavingSmallPotRoom" type="Node2D" unique_id=757854476]
 

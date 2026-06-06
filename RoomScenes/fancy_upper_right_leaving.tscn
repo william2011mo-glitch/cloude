@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b70fhcoxsn5gb"]
 
-[ext_resource type="Texture2D" path="res://BW Museum Photos PNG/BW5e Small DR -_ Great DR copy 2.png" id="1_bilbq"]
 [ext_resource type="Script" uid="uid://csq5xx0lq2ayd" path="res://RoomScenes/fancy_upper_right_leaving.gd" id="1_o56dd"]
+[ext_resource type="Texture2D" uid="uid://ba3rax5r8l6k1" path="res://BW Museum Photos PNG/BW5e Small DR -_ Great DR copy 3.png" id="2_o56dd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bilbq"]
 radius = 72.0
@@ -13,7 +13,7 @@ script = ExtResource("1_o56dd")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2088959670]
 offset_right = 1919.0
 offset_bottom = 1081.0
-texture = ExtResource("1_bilbq")
+texture = ExtResource("2_o56dd")
 expand_mode = 3
 
 [node name="golden_child" type="Area2D" parent="." unique_id=187464260]
