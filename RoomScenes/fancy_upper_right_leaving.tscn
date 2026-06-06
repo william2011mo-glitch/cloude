@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b70fhcoxsn5gb"]
 
-[ext_resource type="Texture2D" uid="uid://d3f03ye6oev0j" path="res://BW Museum Photos PNG/BW5e Small DR -_ Great DR copy 2.png" id="1_bilbq"]
+[ext_resource type="Texture2D" path="res://BW Museum Photos PNG/BW5e Small DR -_ Great DR copy 2.png" id="1_bilbq"]
 [ext_resource type="Script" uid="uid://csq5xx0lq2ayd" path="res://RoomScenes/fancy_upper_right_leaving.gd" id="1_o56dd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bilbq"]
