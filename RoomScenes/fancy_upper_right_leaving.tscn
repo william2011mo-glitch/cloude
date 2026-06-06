@@ -1,11 +1,25 @@
 [gd_scene format=3 uid="uid://b70fhcoxsn5gb"]
 
 [ext_resource type="Texture2D" uid="uid://d3f03ye6oev0j" path="res://BW Museum Photos PNG/BW5e Small DR -_ Great DR copy 2.png" id="1_bilbq"]
+[ext_resource type="Script" uid="uid://csq5xx0lq2ayd" path="res://RoomScenes/fancy_upper_right_leaving.gd" id="1_o56dd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bilbq"]
+radius = 72.0
+height = 214.0
 
 [node name="UpperRightSmallFancyRoomEntrance" type="Node2D" unique_id=576108983]
+script = ExtResource("1_o56dd")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2088959670]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_bilbq")
 expand_mode = 3
+
+[node name="golden_child" type="Area2D" parent="." unique_id=187464260]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="golden_child" unique_id=1573751984]
+position = Vector2(1832, 342)
+shape = SubResource("CapsuleShape2D_bilbq")
+
+[connection signal="input_event" from="golden_child" to="." method="_on_golden_child_input_event"]
