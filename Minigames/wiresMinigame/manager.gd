@@ -27,4 +27,4 @@ func spawnWire(anchorPos: Vector2, startPosition: Vector2, targetPos: Vector2, w
 
 func end():
 	if(wires.all(func(w): return w.connected)):
-		print("done")
+		queue_free()

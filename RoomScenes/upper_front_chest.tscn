@@ -1,13 +1,20 @@
 [gd_scene format=3 uid="uid://1gm8e0b2n5u"]
 
 [ext_resource type="Script" uid="uid://b4qmj4ldgdc3l" path="res://RoomScenes/upper_front_chest.gd" id="1_mhpcw"]
-[ext_resource type="Texture2D" uid="uid://cc8f2p5lx4rrn" path="res://BW Museum Photos PNG/BW3f Chest also shira make one with it open bcs this is an item copy.png" id="2_mhpcw"]
+[ext_resource type="Texture2D" uid="uid://bemij4qk2afhc" path="res://BW Museum Photos PNG/BW3f Chest also shira make one with it open bcs this is an item copy.png" id="2_mhpcw"]
+[ext_resource type="Texture2D" uid="uid://yetli06ndrvu" path="res://BW Museum Photos PNG/BW3f Chest OPENED copy.png" id="3_pyq5c"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pyq5c"]
 points = PackedVector2Array(407, 709, 530, 1023, 1186, 817, 1235, 586, 1132, 489, 473, 544)
 
 [node name="UpperFrontChest" type="Node2D" unique_id=1587335025]
 script = ExtResource("1_mhpcw")
+
+[node name="Reveal" type="TextureRect" parent="." unique_id=1161899283]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("3_pyq5c")
+expand_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=253330360]
 offset_right = 1919.0
