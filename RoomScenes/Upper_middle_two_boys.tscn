@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://djk1wkmp805f"]
+
+[ext_resource type="Script" uid="uid://cv12prcttqd5k" path="res://RoomScenes/upper_middle_forward_final.gd" id="1_kqt6c"]
+[ext_resource type="Texture2D" uid="uid://caufx17lm24c5" path="res://BW Museum Photos PNG/BW4b The painting of two boys copy.png" id="2_kqt6c"]
+
+[node name="UpperMiddleForwardFinal" type="Node2D" unique_id=276004491]
+script = ExtResource("1_kqt6c")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=595869705]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("2_kqt6c")
+expand_mode = 3

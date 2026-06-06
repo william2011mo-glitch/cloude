@@ -21,4 +21,11 @@ expand_mode = 3
 position = Vector2(919.5, 638.75)
 shape = SubResource("RectangleShape2D_2dikm")
 
+[node name="boy_painting" type="Area2D" parent="." unique_id=178613020]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="boy_painting" unique_id=900019489]
+position = Vector2(14, 659)
+polygon = PackedVector2Array(-14, -10, 217, -23, 224, 300, -15, 384)
+
 [connection signal="input_event" from="door_yes" to="." method="_on_door_yes_input_event"]
+[connection signal="input_event" from="boy_painting" to="." method="_on_boy_painting_input_event"]
