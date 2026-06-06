@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dbgviiyx8k0he"]
+
+[ext_resource type="Texture2D" uid="uid://ct3hot2cwtn5c" path="res://BW Museum Photos PNG/BW4c The painting of a woman copy.png" id="1_iksv5"]
+
+[node name="DownStairsFirstFromTop" type="Node2D" unique_id=916132574]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1791260253]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_iksv5")
+expand_mode = 3
