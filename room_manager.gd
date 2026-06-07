@@ -298,6 +298,7 @@ var is_changing_room = false
 func _process(_delta: float) -> void:
 	if(Guard.get(Guard.guardRoom).has(current_room)):
 		print("found");
+		#guard detected
 	
 
 func move(direction):
