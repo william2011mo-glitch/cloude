@@ -18,8 +18,6 @@ config/name="ArrayTraversalMinigame"
 run/main_scene="uid://bblvw405g7t8s"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
-<<<<<<<HEADconfig/name="ArrayTraversalMinigame"
-<<<<<<<Updatedupstreamrun/main_scene="uid://bblvw405g7t8s"
 
 [autoload]
 
