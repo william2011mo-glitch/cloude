@@ -295,6 +295,11 @@ func _ready() -> void:
 
 var is_changing_room = false
 
+func _process(_delta: float) -> void:
+	if(current_room):
+		pass
+	pass
+
 func move(direction):
 	if is_changing_room:
 		return
