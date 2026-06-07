@@ -241,7 +241,8 @@ var rooms = {
 	"Smaller_room": {
 		"scene": "res://RoomScenes/upper_smaller_fancy_room_first.tscn",
 		"exits": {
-			"back": "the turn back that shira took a picture of",
+			"forward": "Smaller_room_plate",
+			"back": "Smaller_room_door_leave",
 			"left": "Smaller_room_left"
 		}
 	},
@@ -255,7 +256,9 @@ var rooms = {
 	"Smaller_room_left_turned": {
 		"scene": "res://RoomScenes/upper_smaller_fancy_room_case_turned.tscn",
 		"exits": {
-			"back": "case"
+			"back": "case",
+			"right": "Smaller_room_door_leave",
+			"left": "Smaller_room_plate"
 		}
 	},
 	"case": {
@@ -284,6 +287,26 @@ var rooms = {
 		"exits": {
 			"forward": "Opening_first",
 			"back": "Up_stairs_1"
+		}
+	},
+	"Smaller_room_plate": {
+		"scene": "res://RoomScenes/upper_smaller_fancy_room_plate.tscn",
+		"exits": {
+			"back": "Smaller_room_plate_turn_around"
+		}
+	},
+	"Smaller_room_plate_turn_around": {
+		"scene": "res://RoomScenes/upper_smaller_fancy_room_turn_from_plate.tscn",
+		"exits": {
+			"back": "Smaller_room_plate",
+			"right": "Smaller_room"
+		}
+	},
+	"Smaller_room_door_leave": {
+		"scene": "res://RoomScenes/upper_smaller_fancy_room_door_leave.tscn",
+		"exits": {
+			"back": "Smaller_room",
+			"forward": "Upper_main_left_turn_then_around"
 		}
 	},
 }

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://beuu0ex7jfkdv"]
+
+[ext_resource type="Script" uid="uid://chjkkfmuodint" path="res://RoomScenes/upper_smaller_fancy_room_door_leave.gd" id="1_dp8ft"]
+[ext_resource type="Texture2D" uid="uid://dhty71i3er07w" path="res://BW Museum Photos PNG/BW7f Door To Leave PR copy.png" id="1_gy0gf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nip7o"]
+size = Vector2(340, 646)
+
+[node name="UpperSmallerFancyRoomDoorLeave" type="Node2D" unique_id=305979930]
+script = ExtResource("1_dp8ft")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1288989697]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_gy0gf")
+expand_mode = 3
+
+[node name="door" type="Area2D" parent="." unique_id=1669650406]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door" unique_id=1401415216]
+position = Vector2(958, 655)
+shape = SubResource("RectangleShape2D_nip7o")
+
+[connection signal="input_event" from="door" to="." method="_on_door_input_event"]
