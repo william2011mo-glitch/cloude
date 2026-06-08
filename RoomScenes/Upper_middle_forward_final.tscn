@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://di34jg5802mmp"]
 
 [ext_resource type="Script" uid="uid://cv12prcttqd5k" path="res://RoomScenes/upper_middle_forward_final.gd" id="1_00wrs"]
-[ext_resource type="Texture2D" uid="uid://cb7q4bldd7tn2" path="res://BW Museum Photos PNG/BW4j Close to door near 2 boys MR copy.png" id="2_00wrs"]
+[ext_resource type="Texture2D" uid="uid://cvdxtm8ebmand" path="res://BW Museum Photos PNG/BW4j Close to door near 2 boys MR copy.png" id="2_00wrs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dikm"]
 size = Vector2(475, 834.5)

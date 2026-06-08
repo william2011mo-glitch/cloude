@@ -107,6 +107,7 @@ var rooms = {
 	"Upper_middle_forward_1": {
 		"scene": "res://RoomScenes/upper_middle_room_forward_one.tscn",
 		"exits": {
+			"two_boys_painting": "Two_boys",
 			"forward": "Upper_middle_forward_final",
 			"back": "Upper_middle_back_1"
 		}
@@ -124,14 +125,22 @@ var rooms = {
 			"forward": "Upper_middle_forward_final",
 			"left": "Upper_middle_right_leaving",
 			"right": "Upper_middle_right",
-			"back": "Upper_middle_room_enter"
+			"back": "Upper_middle_right_back",
+			"painting_of_lady": "Upper_middle_lady"
 		}
 	},
 	"Upper_middle_room_opposite": {
 		"scene": "res://RoomScenes/upper_middle_room_from_opposite.tscn",
 		"exits": {
+			"left": "Upper_middle_right_back",
 			"right": "Upper_middle_back_1",
 			"back": "Upper_middle_forward_final"
+		}
+	},
+	"Upper_middle_lady": {
+		"scene": "res://RoomScenes/Upper_middle_lady_painting.tscn",
+		"exits": {
+			"back": "Upper_middle_room_opposite"
 		}
 	},
 	"Upper_middle_right": {
@@ -139,14 +148,25 @@ var rooms = {
 		"exits": {
 			"door_im_done_with_naming": "Smaller_room_to_small_room",
 			"left": "Upper_middle_forward_2",
-			"back": "Upper_middle_right_leaving"
+			"back": "Upper_middle_right_leaving",
+			"right": "Upper_middle_right_back"
 		}
 	},
 	"Upper_middle_right_leaving": {
 		"scene": "res://RoomScenes/upper_middle_right_turn_leaving.tscn",
 		"exits": {
+			"left": "Upper_middle_right_back",
 			"right": "Upper_middle_forward_2",
 			"back": "Upper_middle_right"
+		}
+	},
+	"Upper_middle_right_back": {
+		"scene": "res://RoomScenes/upper_middle_room_backward_two.tscn",
+		"exits": {
+			"left": "Upper_middle_right",
+			"back": "Upper_middle_forward_2",
+			"forward": "Upper_middle_room_turned",
+			"right": "Upper_middle_right_leaving"
 		}
 	},
 	"Upper_middle_forward_final": {
@@ -318,9 +338,9 @@ func _ready() -> void:
 
 var is_changing_room = false
 
-func _process(_delta: float) -> void:
-	if(Guard.get(Guard.guardRoom).has(current_room)):
-		print("found");
+#func _process(_delta: float) -> void:
+	#if(Guard.get(Guard.guardRoom).has(current_room)):
+		#print("found");
 		#guard detected
 	
 
