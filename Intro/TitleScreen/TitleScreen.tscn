@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://6gx0w8laqkm4"]
+
+[ext_resource type="Script" uid="uid://ddvqlggxmauu0" path="res://Intro/TitleScreen/title_screen.gd" id="1_titlescr"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_doyrx"]
+load_path = "res://.godot/imported/LogoRedSign.png-dd3ae07a2b93f8809b3109b088f94f3c.ctex"
+
+[node name="TitleScreen" type="Control" unique_id=1206647260]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_titlescr")
+
+[node name="Background" type="ColorRect" parent="." unique_id=700752080]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07, 0.07, 0.08, 1)
+
+[node name="CenterBox" type="Control" parent="." unique_id=681432565]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -964.0
+offset_top = -946.0
+offset_right = 955.0
+offset_bottom = 399.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="TextureRect" parent="CenterBox" unique_id=1434927739]
+layout_mode = 1
+offset_left = 2.0
+offset_top = 395.0
+offset_right = 1926.0
+offset_bottom = 1489.0
+size_flags_horizontal = 4
+texture = SubResource("CompressedTexture2D_doyrx")
+expand_mode = 1
+
+[node name="InstructionsLabel" type="Label" parent="CenterBox" unique_id=400631626]
+layout_mode = 0
+offset_top = 1152.0
+offset_right = 1919.0
+offset_bottom = 1304.0
+theme_override_font_sizes/font_size = 20
+text = "Explore the museum room by room using the on-screen arrows.
+Click on objects you find along the way — some of them hide
+games worth playing (and prizes worth taking).
+
+Click Start to begin."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="StartButton" type="Button" parent="CenterBox" unique_id=663044339]
+custom_minimum_size = Vector2(200, 56)
+layout_mode = 0
+offset_left = 859.0
+offset_top = 1332.0
+offset_right = 1059.0
+offset_bottom = 1388.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 22
+text = "Start"

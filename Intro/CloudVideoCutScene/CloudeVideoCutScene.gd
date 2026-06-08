@@ -1,9 +1,10 @@
 extends Control
 
 @export var pause_times: Array[float] = [1.5, 11.5, 19.0, 21, 28.0, 31.0, 36.0, 39]
+@export var next_scene_path: String = "res://game.tscn"
 
-@onready var video_player: VideoStreamPlayer = $VideoStreamPlayer
-@onready var click_zone: Control = $ClickArea
+@onready var video_player: VideoStreamPlayer = $VideoContainer/VideoStreamPlayer
+@onready var click_zone: Control = $ClickZone
 
 
 var _triggered: Array[bool] = []
@@ -30,4 +31,4 @@ func _on_click_zone_input(event: InputEvent) -> void:
 
 
 func _on_video_stream_player_finished() -> void:
-	queue_free()
+	get_tree().change_scene_to_file(next_scene_path)
