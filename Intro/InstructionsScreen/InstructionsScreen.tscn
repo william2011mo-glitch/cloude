@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://bk6waymccncvh"]
 
-[ext_resource type="Script" path="res://Intro/InstructionsScreen/instructions_screen.gd" id="1_instr"]
+[ext_resource type="Script" uid="uid://conj8y0sts15d" path="res://Intro/InstructionsScreen/instructions_screen.gd" id="1_instr"]
 
-[node name="InstructionsScreen" type="Control"]
+[node name="InstructionsScreen" type="Control" unique_id=2044045068]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,9 +10,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_instr")
-next_scene_path = "res://game.tscn"
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=169923994]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +21,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="InstructionsText" type="RichTextLabel" parent="."]
+[node name="InstructionsText" type="RichTextLabel" parent="." unique_id=823065135]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,11 +36,11 @@ mouse_filter = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 28
 bbcode_enabled = true
-text = "INSTRUCTIONS
+text = "INSTRUCTIONS:
 
 Click on doors and objects to move through the museum.
 
-WARNINGS
+WARNINGS:
 
 Stay alert — guards patrol the halls. If you're seen, the heist is over.
 
