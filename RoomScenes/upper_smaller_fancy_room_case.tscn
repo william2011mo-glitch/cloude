@@ -1,11 +1,32 @@
 [gd_scene format=3 uid="uid://bv8xpeaycny05"]
 
-[ext_resource type="Texture2D" uid="uid://dca4pq03bkcar" path="res://BW Museum Photos PNG/BW7d First case of porcelain PR CLOSED copy.png" id="1_c1lrd"]
+[ext_resource type="Texture2D" uid="uid://chiqq38d4o6gv" path="res://BW Museum Photos PNG/BW7d First case of porcelain PR CLOSED copy.png" id="1_c1lrd"]
+[ext_resource type="Script" uid="uid://c2hdrfcb4xiy" path="res://RoomScenes/upper_smaller_fancy_room_case.gd" id="1_case"]
+[ext_resource type="Texture2D" uid="uid://dakydb0npr8uc" path="res://BW Museum Photos PNG/BW7c First case of porcelain PR OPEN copy.png" id="2_open"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_case"]
+size = Vector2(692, 454.5)
 
 [node name="UpperSmallerFancyRoomCase" type="Node2D" unique_id=603611235]
+script = ExtResource("1_case")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1872597415]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_c1lrd")
 expand_mode = 3
+
+[node name="opened" type="TextureRect" parent="." unique_id=1872597416]
+visible = false
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("2_open")
+expand_mode = 3
+
+[node name="Area2D" type="Area2D" parent="." unique_id=261809921]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1022279162]
+position = Vector2(1030, 754)
+shape = SubResource("RectangleShape2D_case")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

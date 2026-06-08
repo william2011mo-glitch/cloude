@@ -376,7 +376,7 @@ func _win_game() -> void:
 		moving_plate.queue_free()
 		moving_plate = null
 
-	end_label.text = "%d plates balanced without a wobble!\nIn the clatter, you slip the diamond\nright out of the pot." % score
+	end_label.text = "%d plates balanced without a wobble!\nIn the clatter, you slip the china\nright out of the case." % score
 	restart_button.visible = false
 	secondary_button.text = "Pocket It"
 	end_panel.visible = true
