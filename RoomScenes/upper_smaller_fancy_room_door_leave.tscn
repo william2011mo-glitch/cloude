@@ -15,10 +15,10 @@ offset_bottom = 1081.0
 texture = ExtResource("1_gy0gf")
 expand_mode = 3
 
-[node name="door" type="Area2D" parent="." unique_id=1669650406]
+[node name="door_the_door" type="Area2D" parent="." unique_id=1669650406]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="door" unique_id=1401415216]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door_the_door" unique_id=1401415216]
 position = Vector2(958, 655)
 shape = SubResource("RectangleShape2D_nip7o")
 
-[connection signal="input_event" from="door" to="." method="_on_door_input_event"]
+[connection signal="input_event" from="door_the_door" to="." method="_on_door_input_event"]

@@ -293,13 +293,14 @@ var rooms = {
 		"exits": {
 			"forward": "Smaller_room_plate",
 			"back": "Smaller_room_door_leave",
-			"left": "Smaller_room_left"
+			"left": "Smaller_room_left",
 		}
 	},
 	"Smaller_room_left": {
 		"scene": "res://RoomScenes/upper_smaller_fancy_room_left.tscn",
 		"exits": {
-			"back": "Smaller_room_left_turned",
+			"right": "Smaller_room",
+			"back": "Smaller_room_door_leave",
 			"forward": "case"
 		}
 	},
@@ -349,14 +350,14 @@ var rooms = {
 		"scene": "res://RoomScenes/upper_smaller_fancy_room_turn_from_plate.tscn",
 		"exits": {
 			"back": "Smaller_room_plate",
-			"right": "Smaller_room"
+			"right": "Smaller_room_left_turned"
 		}
 	},
 	"Smaller_room_door_leave": {
 		"scene": "res://RoomScenes/upper_smaller_fancy_room_door_leave.tscn",
 		"exits": {
 			"back": "Smaller_room",
-			"forward": "Upper_main_left_turn_then_around"
+			"door_the_door": "Upper_main_left_turn_then_around"
 		}
 	},
 }
