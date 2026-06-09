@@ -189,8 +189,8 @@ var rooms = {
 		"scene": "res://RoomScenes/fancy_room_upper_first.tscn",
 		"exits": {
 			"gold_statue": "Big_DR_golden_baby",
-			"back": "Upper_middle_forward_final",
-			"right": "Big_DR_right",
+			"back": "Big_Piano_From_Opposite",
+			"right": "Big_DR_vase",
 			"left": "Big_DR_Left_Piano"
 		}
 	},
@@ -199,14 +199,14 @@ var rooms = {
 		"exits": {
 			"forward": "Big_Piano_Close",
 			"back": "Big_DR_enter",
-			"piano_close": "Big_Piano_Close"
+			"piano_close": "Big_Piano_Close",
+			"right": "Big_DR_enter"
 		}
 	},
 	"Big_Piano_Close": {
 		"scene": "res://RoomScenes/fancy_room_upper_piano1.tscn",
 		"exits": {
 			"back": "Big_DR_Left_Piano",
-			"forward": "Big_Piano_Closer",
 			"piano_closer": "Big_Piano_Closer"
 		}
 	},
@@ -216,10 +216,25 @@ var rooms = {
 			"back": "Big_Piano_Close"
 		}
 	},
+	"Big_Piano_From_Opposite": {
+		"scene": "res://RoomScenes/fancy_room_piano_different.tscn",
+		"exits": {
+			"back": "Big_DR_enter",
+			"pretty_door": "Upper_middle_room_opposite",
+			"piano_uh": "Big_Piano_Close"
+		}
+	},
 	"Big_DR_golden_baby": {
 		"scene": "res://RoomScenes/Upper_big_fancy_golden_baby.tscn",
 		"exits": {
 			"back": "Big_DR_enter",
+			"right": "Big_DR_vase"
+		}
+	},
+	"Big_DR_vase": {
+		"scene": "res://RoomScenes/fancy_room_vase.tscn",
+		"exits": {
+			"back": "Big_DR_leaving",
 			"right": "Big_DR_right"
 		}
 	},
@@ -235,7 +250,7 @@ var rooms = {
 		"exits": {
 			"back": "Big_DR_right",
 			"golden_child": "Big_DR_golden_baby",
-			"left": "Big_DR_enter",
+			"forward": "Big_Piano_From_Opposite"
 		}
 	},
 	"Small_pot_room": {

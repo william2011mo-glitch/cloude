@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://eo48ffjt5dkt"]
+
+[ext_resource type="Script" uid="uid://5dpyd23lcjfe" path="res://RoomScenes/fancy_room_vase.gd" id="1_8yaay"]
+[ext_resource type="Texture2D" uid="uid://k4ji4ax7echc" path="res://BW Museum Photos PNG/BW5c Blue Vase copy.png" id="2_gronm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3lga8"]
+size = Vector2(149, 215)
+
+[node name="FancyRoomUpperLeft" type="Node2D" unique_id=296308002]
+script = ExtResource("1_8yaay")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=861261690]
+custom_minimum_size = Vector2(1919, 1081)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_gronm")
+expand_mode = 3
+
+[node name="blue_vase" type="Area2D" parent="." unique_id=1229855310]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blue_vase" unique_id=1125869578]
+position = Vector2(885.5, 500.5)
+shape = SubResource("RectangleShape2D_3lga8")
+
+[connection signal="input_event" from="blue_vase" to="." method="_on_piano_close_input_event"]

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ca1547gwgufet"]
+
+[ext_resource type="Script" uid="uid://xbcywuqtop2r" path="res://RoomScenes/fancy_room_upper_piano_1.gd" id="1_rxwwn"]
+[ext_resource type="Texture2D" uid="uid://bnwy6u33jr80x" path="res://BW Museum Photos PNG/BW5ae Look At Piano On Side Great DR.png" id="2_rxwwn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wl3bi"]
+size = Vector2(355.5, 163.25)
+
+[node name="FancyRoomUpperPianoDifferent" type="Node2D" unique_id=163271745]
+script = ExtResource("1_rxwwn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1227200439]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("2_rxwwn")
+expand_mode = 3
+
+[node name="piano_uh" type="Area2D" parent="." unique_id=1893405504]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piano_uh" unique_id=1765863620]
+position = Vector2(892, 576)
+shape = SubResource("RectangleShape2D_wl3bi")
+
+[node name="pretty_door" type="Area2D" parent="." unique_id=270435414]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pretty_door" unique_id=1412357017]
+position = Vector2(113, 74)
+polygon = PackedVector2Array(-110, -76, 318, -76, 354, 821, -115, 938)
+
+[connection signal="input_event" from="piano_uh" to="." method="_on_piano_closer_input_event"]
+[connection signal="input_event" from="pretty_door" to="." method="_on_area_2d_input_event"]
