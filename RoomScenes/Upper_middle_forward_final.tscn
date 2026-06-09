@@ -27,5 +27,12 @@ shape = SubResource("RectangleShape2D_2dikm")
 position = Vector2(14, 659)
 polygon = PackedVector2Array(-14, -10, 217, -23, 224, 300, -15, 384)
 
+[node name="jewel_table" type="Area2D" parent="." unique_id=934794755]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="jewel_table" unique_id=1524178438]
+position = Vector2(1766, 736)
+polygon = PackedVector2Array(-86, 70, 31, 187, 16, 370, -292, 375, -382, 250, -388, 63)
+
 [connection signal="input_event" from="door_yes" to="." method="_on_door_yes_input_event"]
 [connection signal="input_event" from="boy_painting" to="." method="_on_boy_painting_input_event"]
+[connection signal="input_event" from="jewel_table" to="." method="_on_jewel_table_input_event"]

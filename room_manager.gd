@@ -85,7 +85,7 @@ var rooms = {
 	"Two_boys": {
 		"scene": "res://RoomScenes/upper_middle_two_boys.tscn",
 		"exits": {
-			"back": "Upper_middle_room_opposite",
+			"back": "Upper_middle_forward_final",
 			"right": "Upper_middle_forward_final"
 		}
 	},
@@ -140,7 +140,7 @@ var rooms = {
 	"Upper_middle_lady": {
 		"scene": "res://RoomScenes/Upper_middle_lady_painting.tscn",
 		"exits": {
-			"back": "Upper_middle_room_opposite"
+			"back": "Upper_middle_forward_2"
 		}
 	},
 	"Upper_middle_right": {
@@ -169,12 +169,19 @@ var rooms = {
 			"right": "Upper_middle_right_leaving"
 		}
 	},
+	"Upper_middle_jewels": {
+		"scene": "res://RoomScenes/Upper_middle_empty_jewel_box.tscn",
+		"exits": {
+			"back": "Upper_middle_forward_final"
+		}
+	},
 	"Upper_middle_forward_final": {
 		"scene": "res://RoomScenes/Upper_middle_forward_final.tscn",
 		"exits": {
 			"door_yes": "Big_DR_enter",
 			"back": "Upper_middle_room_opposite",
-			"boy_painting": "Two_boys"
+			"boy_painting": "Two_boys",
+			"jewel_table": "Upper_middle_jewels"
 		}
 	},
 	

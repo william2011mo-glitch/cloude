@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c0adfq0p66ntx"]
+
+[ext_resource type="Texture2D" uid="uid://djbwn3u7mij83" path="res://BW Museum Photos PNG/BW4k Empty Platform MR shira add an artifact here btw copy.png" id="1_mcly7"]
+
+[node name="UpperMiddleEnteredFirst" type="Node2D" unique_id=1050471962]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=856959091]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_mcly7")
+expand_mode = 3
