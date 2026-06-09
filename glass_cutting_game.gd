@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 const TOLERANCE := 20.0
-const POINT_SPACING := 4.0
+const POINT_SPACING := 8.0
 
 var shape_points: PackedVector2Array = []
 var traced := []
