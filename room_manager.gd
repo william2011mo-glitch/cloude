@@ -198,14 +198,16 @@ var rooms = {
 		"scene": "res://RoomScenes/fancy_room_upper_left.tscn",
 		"exits": {
 			"forward": "Big_Piano_Close",
-			"back": "Big_DR_enter"
+			"back": "Big_DR_enter",
+			"piano_close": "Big_Piano_Close"
 		}
 	},
 	"Big_Piano_Close": {
 		"scene": "res://RoomScenes/fancy_room_upper_piano1.tscn",
 		"exits": {
 			"back": "Big_DR_Left_Piano",
-			"forward": "Big_Piano_Closer"
+			"forward": "Big_Piano_Closer",
+			"piano_closer": "Big_Piano_Closer"
 		}
 	},
 	"Big_Piano_Closer": {

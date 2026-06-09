@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bwi6d7bauwvcg"]
+
+[ext_resource type="Script" uid="uid://234ymb4fxeu4" path="res://Minigames/sheetMusicMinigame/sheet_music_minigame.gd" id="1_sheet"]
+[ext_resource type="Texture2D" uid="uid://dk2msmug7wk0k" path="res://BW Museum Photos PNG/MidnightSonataSheetMusic.png" id="2_sheet"]
+
+[node name="SheetMusicMinigame" type="CanvasLayer" unique_id=1331049192]
+script = ExtResource("1_sheet")
+
+[node name="Control" type="Control" parent="." unique_id=1386614925]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SheetMusic" type="TextureRect" parent="Control" unique_id=1338743049]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_sheet")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Cursor" type="ColorRect" parent="Control" unique_id=1627905727]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 309.0
+offset_right = 743.0
+offset_bottom = 557.0
+mouse_filter = 2
+color = Color(0.2, 0.6, 1, 0.75)
+
+[node name="HintLabel" type="Label" parent="Control" unique_id=1078725018]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -183.0
+offset_right = -679.0
+offset_bottom = -123.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 41
+text = "(HINT) Play: C   (1 / 9)"
+horizontal_alignment = 1
+
+[node name="KeysLabel" type="Label" parent="Control" unique_id=1521818518]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 813.0
+offset_right = 1061.0
+offset_bottom = 880.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 48
+text = "Keys: C,  D,  E,  F,  G,  A,  B     Esc = quit"
