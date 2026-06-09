@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://cxdfamryvlo8k"]
 
-[ext_resource type="Texture2D" uid="uid://cw7vxroodnnys" path="res://BW Museum Photos PNG/BW4e Left of Table MR copy.png" id="1_wmuiw"]
+[ext_resource type="Texture2D" uid="uid://bgowhr1udlaf7" path="res://BW Museum Photos PNG/BW4e Left of Table MR copy.png" id="1_wmuiw"]
+[ext_resource type="Script" uid="uid://ca61pp3h3pcyk" path="res://RoomScenes/upper_middle_room_forward_one.gd" id="1_xybv4"]
 
 [node name="UpperMiddleRoomForwardOne" type="Node2D" unique_id=54203761]
+script = ExtResource("1_xybv4")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=601565769]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_wmuiw")
 expand_mode = 3
+
+[node name="two_boys_painting" type="Area2D" parent="." unique_id=382520127]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="two_boys_painting" unique_id=1880792318]
+position = Vector2(681, 612)
+polygon = PackedVector2Array(-52, -42, 72, -41, 94, 130, -27, 148)
+
+[connection signal="input_event" from="two_boys_painting" to="." method="_on_two_boys_input_event"]

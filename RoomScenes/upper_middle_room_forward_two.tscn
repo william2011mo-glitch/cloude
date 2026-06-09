@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://chbp01g4dvbme"]
 
-[ext_resource type="Texture2D" uid="uid://tf267b7uhwrm" path="res://BW Museum Photos PNG/BW4i Right of Table MR copy.png" id="1_faf4m"]
+[ext_resource type="Texture2D" uid="uid://dmaqhe6012efh" path="res://BW Museum Photos PNG/BW4i Right of Table MR copy.png" id="1_faf4m"]
+[ext_resource type="Script" uid="uid://ufpxhdb07rog" path="res://RoomScenes/upper_middle_room_forward_two.gd" id="1_nqy3f"]
 
 [node name="UpperMiddleRoomForwardOne" type="Node2D" unique_id=2073027077]
+script = ExtResource("1_nqy3f")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1599925552]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_faf4m")
 expand_mode = 3
+
+[node name="painting_of_lady" type="Area2D" parent="." unique_id=1615809101]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="painting_of_lady" unique_id=1130263451]
+position = Vector2(1171, 190)
+polygon = PackedVector2Array(-103, -39, 21, -255, 33, 453, -96, 426)
+
+[connection signal="input_event" from="painting_of_lady" to="." method="_on_painting_of_lady_input_event"]
