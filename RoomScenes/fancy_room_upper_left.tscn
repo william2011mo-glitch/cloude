@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://chuswyomnnqdp"]
+
+[ext_resource type="Texture2D" uid="uid://ryypsvhyy4i3" path="res://BW Museum Photos PNG/BW5ab Turn Left Great DR copy 2.png" id="1_3lga8"]
+
+[node name="FancyRoomUpperLeft" type="Node2D" unique_id=296308002]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=861261690]
+custom_minimum_size = Vector2(1919, 1081)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_3lga8")
+expand_mode = 3

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dk2w86c127ied"]
+
+[ext_resource type="Texture2D" uid="uid://brsmlrejymcds" path="res://BW Museum Photos PNG/BW5ad Sheet Music For Piano Great DR copy 2.png" id="1_u86gl"]
+
+[node name="FancyRoomUpperPiano2" type="Node2D" unique_id=1226086034]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=936830992]
+offset_right = 1919.0
+offset_bottom = 1081.0
+texture = ExtResource("1_u86gl")
+expand_mode = 3

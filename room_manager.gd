@@ -163,7 +163,28 @@ var rooms = {
 		"exits": {
 			"gold_statue": "Big_DR_golden_baby",
 			"back": "Upper_middle_forward_final",
-			"right": "Big_DR_right"
+			"right": "Big_DR_right",
+			"left": "Big_DR_Left_Piano"
+		}
+	},
+	"Big_DR_Left_Piano": {
+		"scene": "res://RoomScenes/fancy_room_upper_left.tscn",
+		"exits": {
+			"forward": "Big_Piano_Close",
+			"back": "Big_DR_enter"
+		}
+	},
+	"Big_Piano_Close": {
+		"scene": "res://RoomScenes/fancy_room_upper_piano1.tscn",
+		"exits": {
+			"back": "Big_DR_Left_Piano",
+			"forward": "Big_Piano_Closer"
+		}
+	},
+	"Big_Piano_Closer": {
+		"scene": "res://RoomScenes/fancy_room_upper_piano2.tscn",
+		"exits": {
+			"back": "Big_Piano_Close"
 		}
 	},
 	"Big_DR_golden_baby": {
