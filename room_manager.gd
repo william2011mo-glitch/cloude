@@ -384,11 +384,22 @@ func _ready() -> void:
 
 var is_changing_room = false
 
+var is_in_room = false;
 func _process(_delta: float) -> void:
 	if(Guard.get(Guard.guardRoom).has(current_room)):
-		print("found");
+		if(is_in_room):
+			return
+		
+		is_in_room = true;
+		var minigame = load("res://Minigames/guardMinigame/guardMinigame.tscn")
+		var instance = minigame.instantiate()
+		instance.gameFinished.connect(caught)
 		#guard detected
-	
+	if(!Guard.get(Guard.guardRoom).has(current_room)):
+		pass
+		#other check for guard
+func caught():
+	print("caught (temporary)")
 
 func move(direction):
 	if is_changing_room:

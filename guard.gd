@@ -1,6 +1,8 @@
 extends Node
 
 var paintings = [];
+var paintingsFailed = [];
+
 var money = 0;
 var guardTime = 0.0;
 

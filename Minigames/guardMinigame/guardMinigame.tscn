@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://csoplkpjkgdfy"]
+
+[ext_resource type="Script" uid="uid://cp5lbh7cimujv" path="res://Minigames/guardMinigame/guard_minigame.gd" id="1_iwjee"]
+
+[node name="GuardMinigame" type="CanvasLayer" unique_id=2125375657]
+
+[node name="Control" type="Control" parent="." unique_id=412492668]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_iwjee")
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1150573362]
+layout_mode = 0
+offset_right = 2000.0
+offset_bottom = 1142.0
+color = Color(1, 0, 0, 0.12156863)
+
+[node name="Label" type="Label" parent="Control" unique_id=1428399339]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 28.0
+offset_right = 1254.0
+offset_bottom = 179.0
+theme_override_font_sizes/font_size = 70
+text = "dsgkjn"
+horizontal_alignment = 1
+vertical_alignment = 1
