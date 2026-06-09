@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://c2hdrfcb4xiy" path="res://RoomScenes/upper_smaller_fancy_room_case.gd" id="1_case"]
 [ext_resource type="Texture2D" uid="uid://dakydb0npr8uc" path="res://BW Museum Photos PNG/BW7c First case of porcelain PR OPEN copy.png" id="2_open"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_case"]
-size = Vector2(692, 454.5)
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_xigdh"]
+points = PackedVector2Array(-210, 191, -172, 360, 609, 86, 634, -37, 276, -257, -281, -167)
 
 [node name="UpperSmallerFancyRoomCase" type="Node2D" unique_id=603611235]
 script = ExtResource("1_case")
@@ -26,7 +26,7 @@ expand_mode = 3
 [node name="Area2D" type="Area2D" parent="." unique_id=261809921]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1022279162]
-position = Vector2(1030, 754)
-shape = SubResource("RectangleShape2D_case")
+position = Vector2(854, 743)
+shape = SubResource("ConvexPolygonShape2D_xigdh")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

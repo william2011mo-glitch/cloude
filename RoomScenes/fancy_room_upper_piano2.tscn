@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dk2w86c127ied"]
+[gd_scene format=3 uid="uid://dk2w86c127ied"]
 
 [ext_resource type="Texture2D" uid="uid://brsmlrejymcds" path="res://BW Museum Photos PNG/BW5ad Sheet Music For Piano Great DR copy 2.png" id="1_u86gl"]
-[ext_resource type="Script" path="res://RoomScenes/fancy_room_upper_piano2.gd" id="2_piano2"]
+[ext_resource type="Script" uid="uid://w15qxvk0a8l0" path="res://RoomScenes/fancy_room_upper_piano2.gd" id="2_piano2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sheet"]
 size = Vector2(900, 400)
@@ -15,10 +15,10 @@ offset_bottom = 1081.0
 texture = ExtResource("1_u86gl")
 expand_mode = 3
 
-[node name="Area2D" type="Area2D" parent="." unique_id=261809922]
+[node name="piano2" type="Area2D" parent="." unique_id=261809922]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1022279163]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piano2" unique_id=1022279163]
 position = Vector2(960, 540)
 shape = SubResource("RectangleShape2D_sheet")
 
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="piano2" to="." method="_on_area_2d_input_event"]

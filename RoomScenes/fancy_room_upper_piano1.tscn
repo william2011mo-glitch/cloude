@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://crr88tnv0e0a1"]
 
+[ext_resource type="Script" uid="uid://xbcywuqtop2r" path="res://RoomScenes/fancy_room_upper_piano_1.gd" id="1_lk2qd"]
 [ext_resource type="Texture2D" uid="uid://cjx3q4r4mtx4u" path="res://BW Museum Photos PNG/BW5ac Look To Piano Great DR copy.png" id="1_wl3bi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wl3bi"]
 size = Vector2(355.5, 163.25)
 
 [node name="FancyRoomUpperPiano1" type="Node2D" unique_id=163271745]
+script = ExtResource("1_lk2qd")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1227200439]
 offset_right = 1919.0
@@ -18,3 +20,5 @@ expand_mode = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="piano_closer" unique_id=1765863620]
 position = Vector2(948.25, 493.375)
 shape = SubResource("RectangleShape2D_wl3bi")
+
+[connection signal="input_event" from="piano_closer" to="." method="_on_piano_closer_input_event"]

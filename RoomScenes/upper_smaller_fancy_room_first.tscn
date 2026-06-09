@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7cxvgg0sgxk1"]
 
-[ext_resource type="Texture2D" uid="uid://xvcyl4vs3tcd" path="res://BW Museum Photos PNG/BW7aa first step in the PR copy.png" id="1_lbiqb"]
+[ext_resource type="Texture2D" uid="uid://b5dk2vfivs8xa" path="res://BW Museum Photos PNG/BW7ab First Turn To Plate In PR copy.png" id="1_lbiqb"]
 
 [node name="UpperSmallerFancyRoomFirst" type="Node2D" unique_id=1257291975]
 

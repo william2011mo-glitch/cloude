@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cnbvxj1o7uti1"]
 
-[ext_resource type="Texture2D" uid="uid://b2tjakk08iil4" path="res://BW Museum Photos PNG/BW5d Great DR -_ Small DR copy.png" id="1_fh6fj"]
+[ext_resource type="Texture2D" uid="uid://gfxj3kuiduiv" path="res://BW Museum Photos PNG/BW5d Great DR -_ Small DR copy.png" id="1_fh6fj"]
 
 [node name="Piano1" type="Node2D" unique_id=1125589992]
 
