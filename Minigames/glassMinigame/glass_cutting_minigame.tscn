@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://fhot1xqb1opn"]
+
+[ext_resource type="Script" uid="uid://d2xkhnj7ayef2" path="res://glass_cutting_game.gd" id="1_fnjxa"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1324006225]
+script = ExtResource("1_fnjxa")
