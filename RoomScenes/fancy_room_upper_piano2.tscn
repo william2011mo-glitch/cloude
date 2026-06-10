@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://w15qxvk0a8l0" path="res://RoomScenes/fancy_room_upper_piano2.gd" id="2_piano2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sheet"]
-size = Vector2(900, 400)
+size = Vector2(850, 400)
 
 [node name="FancyRoomUpperPiano2" type="Node2D" unique_id=1226086034]
 script = ExtResource("2_piano2")
@@ -18,7 +18,7 @@ expand_mode = 3
 [node name="piano2" type="Area2D" parent="." unique_id=261809922]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="piano2" unique_id=1022279163]
-position = Vector2(960, 540)
+position = Vector2(903, 498)
 shape = SubResource("RectangleShape2D_sheet")
 
 [connection signal="input_event" from="piano2" to="." method="_on_area_2d_input_event"]
