@@ -271,7 +271,7 @@ var rooms = {
 		"scene": "res://RoomScenes/upper_right_small_fancy_room_right.tscn",
 		"exits": {
 			"right": "Small_pot_right_2",
-			"back": "Leaving_morning_room_right_2"
+			"back": "Small_room_turned_around"
 		}
 	},
 	"Small_pot_right_2": {
@@ -383,38 +383,57 @@ func _ready() -> void:
 	load_room()
 
 var is_changing_room = false
+var is_in_room = false
+var _guard_instance = null
 
-var is_in_room = false;
 func _process(_delta: float) -> void:
-	if(Guard.get(Guard.guardRoom).has(current_room)):
-		if(is_in_room):
+	if HeistHUD.minigame_active:
+		return
+	if Guard.get(Guard.guardRoom).has(current_room):
+		if is_in_room:
 			return
-		
-		is_in_room = true;
+		is_in_room = true
 		var minigame = load("res://Minigames/guardMinigame/guardMinigame.tscn")
-		var instance = minigame.instantiate()
-		instance.gameFinished.connect(caught)
-		#guard detected
-	if(!Guard.get(Guard.guardRoom).has(current_room)):
-		pass
-		#other check for guard
+		_guard_instance = minigame.instantiate()
+		_guard_instance.gameFinished.connect(caught)
+		add_child(_guard_instance)
+	else:
+		if _guard_instance and is_instance_valid(_guard_instance):
+			_guard_instance.queue_free()
+			_guard_instance = null
+		is_in_room = false
+
 func caught():
-	print("caught (temporary)")
+	_guard_instance = null
+	HeistHUD.lose_most_expensive()
+	current_room = "Opening_first"
+	load_room()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_T:
+		HeistHUD.steal_item("Test Item", 1)
+
+
+
+
+
 
 func move(direction):
 	if is_changing_room:
 		return
-		
+	# Player escaped before the timer ran out — dismiss guard silently
+	if _guard_instance and is_instance_valid(_guard_instance):
+		_guard_instance.queue_free()
+		_guard_instance = null
+	is_in_room = false
 	is_changing_room = true
 	var exits = rooms[current_room]["exits"]
-	
 	if exits.has(direction):
 		current_room = exits[direction]
 		print("new room:", current_room)
 		load_room()
 	else:
 		print("No room in that direction")
-		
 	await get_tree().process_frame
 	is_changing_room = false
 

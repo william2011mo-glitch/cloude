@@ -1,16 +1,17 @@
-extends Control
-var timer = 2.0;
+extends CanvasLayer
+
 signal gameFinished
 
-@onready var time: Label = $Label
-# Called when the node enters the scene tree for the first time.
+@export var time_limit: float = 4.0
+var timer: float
+
+@onready var time_label: Label = $Control/Label
+
 func _ready() -> void:
-	pass # Replace with function body.
+	timer = time_limit
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	timer-=delta;
-	time.text = "%.2f" % timer;
-	if(timer<0):
-		emit_signal("gameFinished");
+	timer -= delta
+	time_label.text = "Guard! Get out!\n%.1f" % max(timer, 0.0)
+	if timer <= 0:
+		emit_signal("gameFinished")

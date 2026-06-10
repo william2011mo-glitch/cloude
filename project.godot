@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Guard="*uid://bljxdmkvf7plg"
+HeistHUD="*res://HeistHUD/heist_hud.tscn"
 
 [display]
 
