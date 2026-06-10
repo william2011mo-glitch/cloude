@@ -415,16 +415,22 @@ func move(direction):
 	var exits = rooms[current_room]["exits"]
 	
 	var wasInGuardRoom = Guard.get(Guard.guardRoom).has(current_room);
+	
 	if exits.has(direction):
 		current_room = exits[direction]
+		
 		var nowInGuardRoom = Guard.get(Guard.guardRoom).has(current_room);
-		print("new room:", current_room)
-		load_room()
+		if(wasInGuardRoom and nowInGuardRoom):
+			if is_instance_valid(instance):
+				remove_child(instance)
+				get_tree().root.add_child(instance)
+		
 		if(wasInGuardRoom and not nowInGuardRoom):
 			if(is_instance_valid(instance)):
 				instance.queue_free();
 				instance = null;
 			is_in_room = false;
+		load_room()
 	else:
 		print("No room in that direction")
 		
