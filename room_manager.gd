@@ -298,6 +298,12 @@ var rooms = {
 			"pot_yes_a_pot": "pot"
 		}
 	},
+	"Smaller_vase": {
+		"scene": "res://RoomScenes/upper_right_small_fancy_room_vase.tscn",
+		"exits": {
+			"back": "Small_room_turned_around"
+		}
+	},
 	"Small_room_turned_around": {
 		"scene": "res://RoomScenes/upper_small_turned_around.tscn",
 		"exits": {
