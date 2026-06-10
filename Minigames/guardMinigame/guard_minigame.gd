@@ -1,8 +1,8 @@
-extends Control
+extends CanvasLayer
 var timer = 2.0;
 signal gameFinished
 
-@onready var time: Label = $Label
+@onready var time: Label = $Control/Label
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -14,3 +14,4 @@ func _process(delta: float) -> void:
 	time.text = "%.2f" % timer;
 	if(timer<0):
 		emit_signal("gameFinished");
+		queue_free()

@@ -383,23 +383,29 @@ func _ready() -> void:
 	load_room()
 
 var is_changing_room = false
-
+var instance
 var is_in_room = false;
 func _process(_delta: float) -> void:
 	if(Guard.get(Guard.guardRoom).has(current_room)):
-		if(is_in_room):
+		if(is_in_room and is_instance_valid(instance)):
 			return
-		
 		is_in_room = true;
-		var minigame = load("res://Minigames/guardMinigame/guardMinigame.tscn")
-		var instance = minigame.instantiate()
-		instance.gameFinished.connect(caught)
-		#guard detected
-	if(!Guard.get(Guard.guardRoom).has(current_room)):
-		pass
-		#other check for guard
+		if is_instance_valid(instance):
+			print("re-adding existing instance")
+			add_child(instance)
+		else:
+			print("making new one")
+			var minigame = load("res://Minigames/guardMinigame/guardMinigame.tscn")
+			instance = minigame.instantiate()
+			add_child(instance)
+			instance.gameFinished.connect(caught)
+			#guard detected
+	else:
+		is_in_room = false;
+
 func caught():
 	print("caught (temporary)")
+	#add consequence here
 
 func move(direction):
 	if is_changing_room:
@@ -408,10 +414,17 @@ func move(direction):
 	is_changing_room = true
 	var exits = rooms[current_room]["exits"]
 	
+	var wasInGuardRoom = Guard.get(Guard.guardRoom).has(current_room);
 	if exits.has(direction):
 		current_room = exits[direction]
+		var nowInGuardRoom = Guard.get(Guard.guardRoom).has(current_room);
 		print("new room:", current_room)
 		load_room()
+		if(wasInGuardRoom and not nowInGuardRoom):
+			if(is_instance_valid(instance)):
+				instance.queue_free();
+				instance = null;
+			is_in_room = false;
 	else:
 		print("No room in that direction")
 		

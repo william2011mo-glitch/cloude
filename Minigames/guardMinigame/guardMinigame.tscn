@@ -3,18 +3,20 @@
 [ext_resource type="Script" uid="uid://cp5lbh7cimujv" path="res://Minigames/guardMinigame/guard_minigame.gd" id="1_iwjee"]
 
 [node name="GuardMinigame" type="CanvasLayer" unique_id=2125375657]
+script = ExtResource("1_iwjee")
 
 [node name="Control" type="Control" parent="." unique_id=412492668]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_iwjee")
+mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control" unique_id=1150573362]
 layout_mode = 0
 offset_right = 2000.0
 offset_bottom = 1142.0
+mouse_filter = 2
 color = Color(1, 0, 0, 0.12156863)
 
 [node name="Label" type="Label" parent="Control" unique_id=1428399339]
