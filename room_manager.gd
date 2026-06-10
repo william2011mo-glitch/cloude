@@ -386,8 +386,19 @@ var is_changing_room = false
 var is_in_room = false
 var _guard_instance = null
 
+const SAFE_ROOMS = [
+	# Upper vestibule
+	"Down_stairs_2", "Upper_main", "Upper_door_closer", "chest",
+	"Upper_main_left_turn", "Leaving_upper_middle", "Up_stairs_2",
+	# Lower vestibule
+	"Down_stairs_1", "Opening_first", "Opening_right",
+	"Up_stairs_1", "Down_stairs_to_opening",
+]
+
 func _process(_delta: float) -> void:
 	if HeistHUD.minigame_active:
+		return
+	if current_room in SAFE_ROOMS:
 		return
 	if Guard.get(Guard.guardRoom).has(current_room):
 		if is_in_room:
@@ -422,18 +433,6 @@ func move(direction):
 	var exits = rooms[current_room]["exits"]
 	if exits.has(direction):
 		current_room = exits[direction]
-		
-		var nowInGuardRoom = Guard.get(Guard.guardRoom).has(current_room);
-		if(wasInGuardRoom and nowInGuardRoom):
-			if is_instance_valid(instance):
-				remove_child(instance)
-				get_tree().root.add_child(instance)
-		
-		if(wasInGuardRoom and not nowInGuardRoom):
-			if(is_instance_valid(instance)):
-				instance.queue_free();
-				instance = null;
-			is_in_room = false;
 		load_room()
 	else:
 		print("No room in that direction")

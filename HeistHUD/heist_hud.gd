@@ -89,7 +89,7 @@ func _show_popup(item_name: String, coins: int, caught: bool) -> void:
 	_popup.add_child(lbl)
 
 	var coin_lbl := Label.new()
-	coin_lbl.text = "+%d coin%s" % [coins, "s" if coins != 1 else ""]
+	coin_lbl.text = "+1 coin"
 	coin_lbl.layout_mode = 0
 	coin_lbl.position = Vector2(140.0, 370.0)
 	coin_lbl.add_theme_font_size_override("font_size", 30)
