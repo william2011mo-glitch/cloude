@@ -409,14 +409,6 @@ func caught():
 	current_room = "Opening_first"
 	load_room()
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and event.keycode == KEY_T:
-		HeistHUD.steal_item("Test Item", 1)
-
-
-
-
-
 
 func move(direction):
 	if is_changing_room:
@@ -430,7 +422,18 @@ func move(direction):
 	var exits = rooms[current_room]["exits"]
 	if exits.has(direction):
 		current_room = exits[direction]
-		print("new room:", current_room)
+		
+		var nowInGuardRoom = Guard.get(Guard.guardRoom).has(current_room);
+		if(wasInGuardRoom and nowInGuardRoom):
+			if is_instance_valid(instance):
+				remove_child(instance)
+				get_tree().root.add_child(instance)
+		
+		if(wasInGuardRoom and not nowInGuardRoom):
+			if(is_instance_valid(instance)):
+				instance.queue_free();
+				instance = null;
+			is_in_room = false;
 		load_room()
 	else:
 		print("No room in that direction")

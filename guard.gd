@@ -6,7 +6,7 @@ var paintingsFailed = [];
 var money = 0;
 var guardTime = 0.0;
 
-var guardRoom = "GrandDrawingRoom";
+var guardRoom = "LowerVestibule";
 var GrandDrawingRoom = ["Big_DR_enter", "Big_DR_leaving"];
 var SmallDrawingRoom = ["Small_pot_room", "Small_pot_room_right", "Smaller_room_to_small_room", "Small_pot_right_2",
  "Small_pot_right_2", "pot"];
