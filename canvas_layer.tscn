@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://cirpsmmmnwkj0"]
+
+[sub_resource type="GDScript" id="GDScript_wf015"]
+script/source = "extends CanvasLayer
+@onready var small: Timer = $smallMovement
+@onready var large: Timer = $largeMovement
+var shake_pos
+var move_amount = 250
+var moving = false
+var base_pos
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	base_pos = Vector2(DisplayServer.window_get_size())/2
+	small.timeout.connect(move_mouse_small)
+	large.timeout.connect(move_mouse_large)
+	pass # Replace with function body.
+
+func _input(event):
+	if event is InputEventMouseMotion and not moving:
+		base_pos = Vector2(DisplayServer.mouse_get_position()) - Vector2(DisplayServer.window_get_position())
+		small.stop()
+		small.start()
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+func move_mouse_small():
+	moving = true
+	var target = (Vector2(base_pos.x+randf_range(-100, 100), base_pos.y+randf_range(-100, 100)))
+	var tween = create_tween()
+	tween.tween_method(func(pos): Input.warp_mouse(pos), base_pos, target, 0.05)
+	tween.finished.connect(func(): moving = false)
+
+func move_mouse_large():
+	var screen_size = Vector2(DisplayServer.window_get_size())
+	var side = randi()%4
+	var target = Vector2(0, 0)
+	if side == 0:  # top
+		target = Vector2(randf_range(0, screen_size.x), 0)
+	elif side == 1:  # bottom
+		target = Vector2(randf_range(0, screen_size.x), screen_size.y)
+	elif side == 2:  # left
+		target = Vector2(0, randf_range(0, screen_size.y))
+	else:  # right
+		target = Vector2(screen_size.x, randf_range(0, screen_size.y))
+	moving = true
+	var tween = create_tween()
+	tween.tween_method(func(pos): Input.warp_mouse(pos), base_pos, target, 0.06)
+	base_pos = target
+	tween.finished.connect(func(): moving = false)
+"
+
+[sub_resource type="GDScript" id="GDScript_v2lfg"]
+script/source = "extends Control
+signal minigame_finished
+@onready var middle: TextureRect = $Middle
+@onready var time_label: Label = $Time
+var time = 3
+var is_inside = false;
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	start_minigame()
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	time_label.text = str(time)
+	changeTime()
+	pass
+
+func start_minigame():
+	middle.mouse_entered.connect(inside)
+	middle.mouse_exited.connect(outside)
+
+func end_minigame():
+	minigame_finished.emit()
+	
+func inside():
+	is_inside = true
+	
+func outside():
+	is_inside = false
+	
+func changeTime():
+	#we can tweak the values
+	if(is_inside):
+		time+=0.01
+	else:
+		time-=0.01
+	if(time>=3):
+		time=2
+	if(time<=0):
+		print(\"time's up\")
+		get_tree().quit()
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tg4cr"]
+load_path = "res://.godot/imported/reze.jpg-ca6a6e77856b8ce491c067f48544656c.ctex"
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1173495769]
+script = SubResource("GDScript_wf015")
+
+[node name="Control" type="Control" parent="." unique_id=189971920]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_v2lfg")
+
+[node name="Middle" type="TextureRect" parent="Control" unique_id=1227426484]
+layout_mode = 0
+offset_left = 499.00003
+offset_top = 260.0
+offset_right = 724.0
+offset_bottom = 485.0
+scale = Vector2(0.6, 0.6)
+texture = SubResource("CompressedTexture2D_tg4cr")
+
+[node name="Time" type="Label" parent="Control" unique_id=2018296553]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 14.0
+offset_right = 751.0
+offset_bottom = 151.0
+theme_override_font_sizes/font_size = 75
+text = "wdwfa"
+horizontal_alignment = 1
+
+[node name="smallMovement" type="Timer" parent="." unique_id=249494841]
+wait_time = 0.05
+autostart = true
+
+[node name="largeMovement" type="Timer" parent="." unique_id=979173081]
+wait_time = 1.5
+autostart = true

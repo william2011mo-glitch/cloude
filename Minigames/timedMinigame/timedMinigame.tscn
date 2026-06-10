@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bso0du01ux2nl"]
+
+[ext_resource type="Script" uid="uid://b25a10vo0tj5r" path="res://Minigames/timedMinigame/timed_minigame.gd" id="1_iu4tj"]
+
+[node name="TimedMinigame" type="CanvasLayer" unique_id=496085897]
+script = ExtResource("1_iu4tj")
+
+[node name="Control" type="Control" parent="." unique_id=1100361167]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="ColorRect" parent="Control" unique_id=1017103339]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0, 0, 1)
+
+[node name="Time1" type="ColorRect" parent="Control" unique_id=1114382416]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Time2" type="ColorRect" parent="Control" unique_id=1318953915]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Player" type="ColorRect" parent="Control" unique_id=1070585069]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
