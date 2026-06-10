@@ -235,7 +235,8 @@ var rooms = {
 		"scene": "res://RoomScenes/fancy_room_vase.tscn",
 		"exits": {
 			"back": "Big_DR_leaving",
-			"right": "Big_DR_right"
+			"right": "Big_DR_right",
+			"hateful_door": "Small_pot_room"
 		}
 	},
 	"Big_DR_right": {
@@ -293,7 +294,8 @@ var rooms = {
 		"exits": {
 			"left": "Small_room_turned_around",
 			"right": "Small_pot_room",
-			"back": "Small_pot_room_right"
+			"back": "Small_pot_room_right",
+			"pot_yes_a_pot": "pot"
 		}
 	},
 	"Small_room_turned_around": {
