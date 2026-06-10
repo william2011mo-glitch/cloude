@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://f4wj7o2oc5n2"]
 
-[ext_resource type="Texture2D" uid="uid://dw70m27avl57k" path="res://BW Museum Photos PNG/BW6j step one after coming out of right door form Small DR copy.png" id="1_5a43c"]
+[ext_resource type="Texture2D" uid="uid://dsk28h0ud51x3" path="res://BW Museum Photos PNG/BW6j step one after coming out of right door form Small DR copy.png" id="1_5a43c"]
 
 [node name="UpperSmallerLeavingToSmall2" type="Node2D" unique_id=1633576530]
 

@@ -22,4 +22,11 @@ expand_mode = 3
 position = Vector2(885.5, 500.5)
 shape = SubResource("RectangleShape2D_3lga8")
 
+[node name="hateful_door" type="Area2D" parent="." unique_id=204978861]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="hateful_door" unique_id=1712135638]
+position = Vector2(1150, 49)
+polygon = PackedVector2Array(-87, -67, 694, -51, 568, 985, -100, 889)
+
 [connection signal="input_event" from="blue_vase" to="." method="_on_piano_close_input_event"]
+[connection signal="input_event" from="hateful_door" to="." method="_on_hateful_door_input_event"]

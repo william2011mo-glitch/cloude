@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://j5h6iksih3wl"]
 
-[ext_resource type="Texture2D" uid="uid://dw70m27avl57k" path="res://BW Museum Photos PNG/BW6j step one after coming out of right door form Small DR copy.png" id="1_hcfv4"]
+[ext_resource type="Script" uid="uid://bpwwgj5hut3sd" path="res://RoomScenes/upper_small_leaving_to_small_2.gd" id="1_2obl0"]
+[ext_resource type="Texture2D" uid="uid://dsk28h0ud51x3" path="res://BW Museum Photos PNG/BW6j step one after coming out of right door form Small DR copy.png" id="1_hcfv4"]
 
 [node name="UpperSmallerLeavingToSmall2" type="Node2D" unique_id=1633576530]
+script = ExtResource("1_2obl0")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=26997821]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_hcfv4")
 expand_mode = 3
+
+[node name="pot_yes_a_pot" type="Area2D" parent="." unique_id=1403810126]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pot_yes_a_pot" unique_id=1471949860]
+position = Vector2(148, 47)
+polygon = PackedVector2Array(1082, 685, 1122, 688, 1144, 721, 1094, 745, 1049, 708)
+
+[connection signal="input_event" from="pot_yes_a_pot" to="." method="_on_pot_yes_a_pot_input_event"]

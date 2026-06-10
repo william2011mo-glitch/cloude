@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b27qpp530ugxf"]
 
 [ext_resource type="Script" uid="uid://c8cntmoquf3qu" path="res://RoomScenes/upper_small_fancy_room_pot.gd" id="1_xf7ov"]
-[ext_resource type="Texture2D" uid="uid://cu8rrochg3b3y" path="res://BW Museum Photos PNG/BW6d Small DR pot copy.png" id="2_xf7ov"]
-[ext_resource type="Texture2D" uid="uid://bhgbnx2o7uh83" path="res://BW Museum Photos PNG/BW6e Small DR pot IS OPENED WITH DIAMOND copy.png" id="3_g2e54"]
+[ext_resource type="Texture2D" uid="uid://byclfhtuxje5n" path="res://BW Museum Photos PNG/BW6d Small DR pot copy.png" id="2_xf7ov"]
+[ext_resource type="Texture2D" uid="uid://b8wggnnxwr5bc" path="res://BW Museum Photos PNG/BW6e Small DR pot IS OPENED WITH DIAMOND copy.png" id="3_g2e54"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2aucn"]
 radius = 225.0
