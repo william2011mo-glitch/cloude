@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ca1547gwgufet"]
 
-[ext_resource type="Script" uid="uid://xbcywuqtop2r" path="res://RoomScenes/fancy_room_upper_piano_1.gd" id="1_rxwwn"]
+[ext_resource type="Script" uid="uid://87srdom3vmqo" path="res://RoomScenes/fancy_room_piano_different.gd" id="1_rxwwn"]
 [ext_resource type="Texture2D" uid="uid://bnwy6u33jr80x" path="res://BW Museum Photos PNG/BW5ae Look At Piano On Side Great DR.png" id="2_rxwwn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wl3bi"]
@@ -27,5 +27,5 @@ shape = SubResource("RectangleShape2D_wl3bi")
 position = Vector2(113, 74)
 polygon = PackedVector2Array(-110, -76, 318, -76, 354, 821, -115, 938)
 
-[connection signal="input_event" from="piano_uh" to="." method="_on_piano_closer_input_event"]
-[connection signal="input_event" from="pretty_door" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="piano_uh" to="." method="_on_piano_uh_input_event"]
+[connection signal="input_event" from="pretty_door" to="." method="_on_pretty_door_input_event"]

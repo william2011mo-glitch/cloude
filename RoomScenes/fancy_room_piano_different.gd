@@ -1,0 +1,18 @@
+extends Node2D
+
+
+
+
+func _on_piano_uh_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			get_parent().move("piano_uh")
+			
+			
+
+
+
+func _on_pretty_door_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			get_parent().move("pretty_door")
