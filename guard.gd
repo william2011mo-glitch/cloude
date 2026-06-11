@@ -6,7 +6,7 @@ var paintingsFailed = [];
 var money = 0;
 var guardTime = 0.0;
 
-var guardRoom = "LowerVestibule";
+var guardRoom = "GrandDrawingRoom";
 var GrandDrawingRoom = ["Big_DR_enter", "Big_DR_leaving"];
 var SmallDrawingRoom = ["Small_pot_room", "Small_pot_room_right", "Smaller_room_to_small_room", "Small_pot_right_2",
  "Small_pot_right_2", "pot"];
@@ -28,8 +28,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	guardTime+=delta;
-	if(guardTime-5>0):
-		guardTime-=5;
+	if(guardTime-20>0):
+		guardTime-=20;
 		guardMove();
 		print(guardRoom)
 	
