@@ -1,6 +1,6 @@
 extends Node2D
 
-var minigame_open := false
+var minigame_open = false
 
 func _on_piano_close_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -12,15 +12,16 @@ func _on_piano_close_input_event(_viewport: Node, event: InputEvent, _shape_idx:
 		minigame_open = true
 		HeistHUD.minigame_active = true
 		var mg = load("res://Minigames/glassMinigame/glass_cutting_minigame.tscn").instantiate()
-		mg.game_finished.connect(_on_glass_finished)
 		add_child(mg)
+		mg.game_finished.connect(_on_glass_finished)
+
 
 func _on_glass_finished(won: bool, _score: int) -> void:
 	minigame_open = false
-	HeistHUD.mark_attempted("blue_vase")
 	HeistHUD.minigame_active = false
 	if won:
-		HeistHUD.steal_item("The Blue Vase", 2)
+		HeistHUD.steal_item("the Blue Vase")
+		HeistHUD.mark_attempted("blue_vase")
 
 func _on_hateful_door_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:

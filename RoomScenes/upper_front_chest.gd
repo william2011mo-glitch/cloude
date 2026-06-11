@@ -28,4 +28,4 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 			$TextureRect.visible = !$TextureRect.visible
 			$Reveal.visible = !$Reveal.visible
 			HeistHUD.mark_attempted("open_chest")
-			HeistHUD.steal_item("Golden Coins")
+			HeistHUD.steal_item("some golden coins")
