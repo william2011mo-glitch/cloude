@@ -157,7 +157,9 @@ var rooms = {
 		"exits": {
 			"left": "Upper_middle_right_back",
 			"right": "Upper_middle_forward_2",
-			"back": "Upper_middle_right"
+			"back": "Upper_middle_right",
+			"its_two_boys": "Two_boys",
+			"yea_this_is_a_painting": "Upper_middle_lady"
 		}
 	},
 	"Upper_middle_right_back": {
