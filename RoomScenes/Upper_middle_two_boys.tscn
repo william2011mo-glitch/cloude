@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://djk1wkmp805f"]
 
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://bwpcedigets4y" path="res://RoomScenes/upper_middle_two_boys.gd" id="1_kqt6c"]
 [ext_resource type="Texture2D" uid="uid://d3uklyd6xc3y3" path="res://BW Museum Photos PNG/BW4b The painting of two boys copy.png" id="2_kqt6c"]
+=======
+[ext_resource type="Script" path="res://RoomScenes/upper_middle_two_boys.gd" id="1_kqt6c"]
+[ext_resource type="Texture2D" uid="uid://caufx17lm24c5" path="res://BW Museum Photos PNG/BW4b The painting of two boys copy.png" id="2_kqt6c"]
+>>>>>>> 6eb8fc09f34396a2141564656eb21a0751d3a47a
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boys"]
+size = Vector2(1920, 1080)
 
 [node name="UpperMiddleForwardFinal" type="Node2D" unique_id=276004491]
 script = ExtResource("1_kqt6c")
@@ -12,9 +20,19 @@ offset_bottom = 1081.0
 texture = ExtResource("2_kqt6c")
 expand_mode = 3
 
+<<<<<<< HEAD
 [node name="boy_thing" type="Area2D" parent="." unique_id=73593486]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="boy_thing" unique_id=375345226]
 polygon = PackedVector2Array(768, 336, 1138, 336, 1140, 753, 770, 749)
 
 [connection signal="input_event" from="boy_thing" to="." method="_on_boy_thing_input_event"]
+=======
+[node name="Area2D" type="Area2D" parent="." unique_id=276004492]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=276004493]
+position = Vector2(960, 540)
+shape = SubResource("RectangleShape2D_boys")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+>>>>>>> 6eb8fc09f34396a2141564656eb21a0751d3a47a
