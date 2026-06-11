@@ -184,7 +184,7 @@ func _break(p: Dictionary) -> void:
 
 # ── input ──────────────────────────────────────────────────────────────────
 func _on_click(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_SPACE:
+	if event is InputEventMouseButton and event.pressed:
 		if state == "start":
 			state = "playing"
 			_new_game()
@@ -203,7 +203,7 @@ func _on_draw() -> void:
 
 	if state == "start":
 		_dc(font, "Glass Platform Heist", SH * 0.40, 82, Color.WHITE)
-		_dc(font, "Space to start  •  Land on %d platforms to win" % TARGET, SH * 0.52, 34, Color(0.7, 0.7, 0.7))
+		_dc(font, "Click to start  •  Land on %d platforms to win" % TARGET, SH * 0.52, 34, Color(0.7, 0.7, 0.7))
 		_dc(font, "A / D  or  ← →  to move", SH * 0.60, 30, Color(0.5, 0.5, 0.5))
 		return
 
