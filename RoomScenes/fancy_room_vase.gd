@@ -19,9 +19,9 @@ func _on_piano_close_input_event(_viewport: Node, event: InputEvent, _shape_idx:
 func _on_glass_finished(won: bool, _score: int) -> void:
 	minigame_open = false
 	HeistHUD.minigame_active = false
+	HeistHUD.mark_attempted("blue_vase")
 	if won:
 		HeistHUD.steal_item("the Blue Vase")
-		HeistHUD.mark_attempted("blue_vase")
 
 func _on_hateful_door_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:

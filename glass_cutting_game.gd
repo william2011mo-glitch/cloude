@@ -12,6 +12,8 @@ var won := false
 
 var draw_control: Control
 var status_label: Label
+var _start_panel: Control
+var _state: String = "start"
 
 
 func _ready():
@@ -33,11 +35,53 @@ func _ready():
 	traced.resize(shape_points.size())
 	traced.fill(false)
 
+	# ── Start panel ──
+	var vp := get_viewport().get_visible_rect().size
+	_start_panel = Control.new()
+	_start_panel.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(_start_panel)
+
+	var sp_bg := ColorRect.new()
+	sp_bg.color = Color(0, 0, 0, 0.82)
+	sp_bg.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	sp_bg.mouse_filter = Control.MOUSE_FILTER_STOP
+	_start_panel.add_child(sp_bg)
+
+	var sp_box := VBoxContainer.new()
+	sp_box.alignment = BoxContainer.ALIGNMENT_CENTER
+	sp_box.add_theme_constant_override("separation", 22)
+	sp_box.position = Vector2(vp.x / 2.0 - 300.0, vp.y / 2.0 - 150.0)
+	sp_box.custom_minimum_size = Vector2(600, 0)
+
+	var sp_title := Label.new()
+	sp_title.text = "Glass Cutting"
+	sp_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sp_title.add_theme_font_size_override("font_size", 58)
+	sp_box.add_child(sp_title)
+
+	var sp_sub := Label.new()
+	sp_sub.text = "Press Space to start"
+	sp_sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sp_sub.add_theme_font_size_override("font_size", 28)
+	sp_sub.modulate = Color(0.78, 0.78, 0.78)
+	sp_box.add_child(sp_sub)
+
+	var sp_how := Label.new()
+	sp_how.text = "Hold the mouse button and trace the glowing shape.\nStray too far from the line and the glass cracks."
+	sp_how.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sp_how.add_theme_font_size_override("font_size", 21)
+	sp_how.modulate = Color(0.60, 0.60, 0.60)
+	sp_how.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	sp_how.custom_minimum_size = Vector2(600, 0)
+	sp_box.add_child(sp_how)
+
+	sp_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
 
 func _process(_delta):
 	draw_control.queue_redraw()
 
-	if game_over:
+	if game_over or _state != "playing":
 		return
 
 	var mouse := get_viewport().get_mouse_position()
@@ -59,7 +103,8 @@ func _process(_delta):
 			won = false
 			status_label.text = "FAILED"
 			emit_signal("game_finished", false, 0)
-			queue_free()
+			_show_end_overlay(false)
+			return
 
 		traced[closest_idx] = true
 
@@ -77,10 +122,42 @@ func _process(_delta):
 			won = true
 			status_label.text = "YOU WIN!"
 			emit_signal("game_finished", true, 1)
-			queue_free()
+			_show_end_overlay(true)
+			return
 	if Input.is_key_pressed(KEY_R):
 		_restart()
 
+
+func _show_end_overlay(win: bool) -> void:
+	var vp := get_viewport().get_visible_rect().size
+	var ep := Control.new()
+	ep.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(ep)
+
+	var ep_bg := ColorRect.new()
+	ep_bg.color = Color(0, 0, 0, 0.70)
+	ep_bg.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	ep_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	ep.add_child(ep_bg)
+
+	var ep_lbl := Label.new()
+	ep_lbl.text = "Glass cut perfectly!\nYou've stolen the vase." if win else "Glass cracked.\nBetter luck next time."
+	ep_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	ep_lbl.add_theme_font_size_override("font_size", 52)
+	ep_lbl.add_theme_color_override("font_color", Color(0.20, 0.95, 0.44) if win else Color(0.95, 0.20, 0.20))
+	ep_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	ep_lbl.custom_minimum_size = Vector2(700, 0)
+	ep_lbl.position = Vector2(vp.x / 2.0 - 350.0, vp.y / 2.0 - 80.0)
+	ep.add_child(ep_lbl)
+
+	await get_tree().create_timer(2.5).timeout
+	queue_free()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if _state == "start" and event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_SPACE:
+		_start_panel.visible = false
+		_state = "playing"
+		get_viewport().set_input_as_handled()
 
 func _restart():
 	game_over = false

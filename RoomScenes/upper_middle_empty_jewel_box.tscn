@@ -1,11 +1,24 @@
 [gd_scene format=3 uid="uid://c0adfq0p66ntx"]
 
 [ext_resource type="Texture2D" uid="uid://djbwn3u7mij83" path="res://BW Museum Photos PNG/BW4k Empty Platform MR shira add an artifact here btw copy.png" id="1_mcly7"]
+[ext_resource type="Script" path="res://RoomScenes/upper_middle_empty_jewel_box.gd" id="2_script"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(1920, 1080)
 
 [node name="UpperMiddleEnteredFirst" type="Node2D" unique_id=1050471962]
+script = ExtResource("2_script")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=856959091]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_mcly7")
 expand_mode = 3
+
+[node name="Area2D" type="Area2D" parent="." unique_id=100000001]
+position = Vector2(960, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=100000002]
+shape = SubResource("RectangleShape2D_1")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
