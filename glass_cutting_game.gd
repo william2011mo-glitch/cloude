@@ -52,6 +52,7 @@ func _ready():
 	sp_box.add_theme_constant_override("separation", 22)
 	sp_box.position = Vector2(vp.x / 2.0 - 300.0, vp.y / 2.0 - 150.0)
 	sp_box.custom_minimum_size = Vector2(600, 0)
+	_start_panel.add_child(sp_box)
 
 	var sp_title := Label.new()
 	sp_title.text = "Glass Cutting"
