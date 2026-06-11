@@ -19,9 +19,6 @@ config/name="ArrayTraversalMinigame"
 run/main_scene="res://Intro/TitleScreen/TitleScreen.tscn"
 =======
 run/main_scene="uid://cgjwcniko8tut"
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
