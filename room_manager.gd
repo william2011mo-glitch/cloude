@@ -412,7 +412,7 @@ func _process(_delta: float) -> void:
 		return
 	if current_room in SAFE_ROOMS:
 		return
-	if Guard.get(Guard.guardRoom).has(current_room):
+	if Guard.get(Guard.guardRoom).has(current_room) and Guard.on:
 		if is_in_room:
 			return
 		is_in_room = true

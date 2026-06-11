@@ -3,6 +3,7 @@ extends Node
 var paintings = [];
 var paintingsFailed = [];
 
+var on = true;
 var money = 0;
 var guardTime = 0.0;
 
@@ -41,7 +42,12 @@ func _process(delta: float) -> void:
 		guardTime-=20;
 		guardMove();
 		print(guardRoom)
-	
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.keycode == KEY_P and event.pressed and not event.echo:
+			on = !on
+			print(on);
 func guardMove():
 	if(guardRoom=="GrandDrawingRoom"):
 		var rand = randi_range(1, 2);
