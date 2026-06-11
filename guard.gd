@@ -73,7 +73,3 @@ func guardMove():
 			guardRoom = "LowerVestibule"
 	else:
 		guardRoom = "UpperVestibule"
-
-
-func guardCheck():
-	pass

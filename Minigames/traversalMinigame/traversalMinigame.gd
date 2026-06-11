@@ -1,5 +1,5 @@
 extends Control
-
+signal game_finished(won:bool, score:int)
 
 # UI references
 var list_input:    LineEdit
@@ -201,12 +201,16 @@ func check_replace_all_solution(raw: String, list_name: String, find_name: Strin
 	)
 
 	if is_standard:
+		emit_signal("game_finished", true, 0)
 		return "Correct! Standard for loop solution."
 	elif is_while:
+		emit_signal("game_finished", true, 0)
 		return "Correct! While loop solution."
 	elif is_index_of:
+		emit_signal("game_finished", true, 0)
 		return "Correct! indexOf loop solution."
 	elif is_recursive:
+		emit_signal("game_finished", true, 0)
 		return "Correct! Recursive solution."
 	else:
 		return "Incorrect. Try again."
