@@ -140,7 +140,7 @@ func _build_ui() -> void:
 	sp_box.add_child(sp_title)
 
 	var sp_sub := Label.new()
-	sp_sub.text = "Click or Space to start  •  Stack %d plates to win" % WIN_SCORE
+	sp_sub.text = "Space to start  •  Stack %d plates to win" % WIN_SCORE
 	sp_sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	sp_sub.add_theme_font_size_override("font_size", 26)
 	sp_sub.modulate = Color(0.85, 0.85, 0.85)
