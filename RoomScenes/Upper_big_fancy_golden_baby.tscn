@@ -1,11 +1,25 @@
 [gd_scene format=3 uid="uid://c2jqcg1hjhjtl"]
 
-[ext_resource type="Texture2D" uid="uid://qxmtacqdkjmo" path="res://BW Museum Photos PNG/BW5b Golden Baby copy.png" id="1_cg7s3"]
+[ext_resource type="Texture2D" uid="uid://bp3aui7eluq5s" path="res://BW Museum Photos PNG/BW5b Golden Baby copy.png" id="1_cg7s3"]
+[ext_resource type="Script" uid="uid://d4i8r4o8i1v6b" path="res://RoomScenes/upper_big_fancy_golden_baby.gd" id="1_hp68w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cg7s3"]
+radius = 183.0
+height = 546.0
 
 [node name="DownStairsFirstFromTop" type="Node2D" unique_id=916132574]
+script = ExtResource("1_hp68w")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1791260253]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_cg7s3")
 expand_mode = 3
+
+[node name="gold_gold" type="Area2D" parent="." unique_id=112853223]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gold_gold" unique_id=323798274]
+position = Vector2(872, 664)
+shape = SubResource("CapsuleShape2D_cg7s3")
+
+[connection signal="input_event" from="gold_gold" to="." method="_on_gold_gold_input_event"]
