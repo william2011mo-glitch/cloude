@@ -1,7 +1,6 @@
 extends Node2D
 
 var passed = false
-var attempted = false
 var minigame_open = false
 
 func _ready() -> void:
@@ -11,7 +10,11 @@ func _ready() -> void:
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if passed or attempted or minigame_open:
+			if minigame_open:
+				return
+			if passed or HeistHUD.has_attempted("porcelain_collection"):
+				if not passed:
+					HeistHUD.show_already_tried_popup()
 				return
 			minigame_open = true
 			HeistHUD.minigame_active = true
@@ -22,7 +25,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 
 func _on_stacker_finished(won: bool, _score: int) -> void:
 	minigame_open = false
-	attempted = true
+	HeistHUD.mark_attempted("porcelain_collection")
 	HeistHUD.minigame_active = false
 	if won:
 		passed = true

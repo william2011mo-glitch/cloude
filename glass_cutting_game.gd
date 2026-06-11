@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal game_finished(won: bool, score: int)
+
 const TOLERANCE := 20.0
 const POINT_SPACING := 8.0
 
@@ -55,7 +57,8 @@ func _process(_delta):
 		if closest_dist > TOLERANCE:
 			game_over = true
 			won = false
-			status_label.text = "FAILED - Press R"
+			status_label.text = "FAILED"
+			emit_signal("game_finished", false, 0)
 			queue_free()
 
 		traced[closest_idx] = true
@@ -72,7 +75,8 @@ func _process(_delta):
 		if completed > traced.size() * 0.98:
 			game_over = true
 			won = true
-			status_label.text = "YOU WIN - Press R"
+			status_label.text = "YOU WIN!"
+			emit_signal("game_finished", true, 1)
 			queue_free()
 	if Input.is_key_pressed(KEY_R):
 		_restart()

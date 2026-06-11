@@ -15,7 +15,7 @@ const DROP_SPEED := 900.0
 const FALL_GRAVITY := 1700.0
 const WIN_SCORE := 10
 
-enum State { MOVING, DROPPING, GAME_OVER, WIN }
+enum State { START, MOVING, DROPPING, GAME_OVER, WIN }
 
 var pastel_palette := [
 	Color(0.0, 0.0, 0.0, 1.0),
@@ -38,12 +38,13 @@ var plates_layer: Node2D
 var moving_plate: ColorRect
 var score_label: Label
 var hint_label: Label
+var start_panel: Control
 var end_panel: ColorRect
 var end_label: Label
 var restart_button: Button
 var secondary_button: Button
 
-var state: int = State.MOVING
+var state: int = State.START
 var score: int = 0
 var speed: float = BASE_SPEED
 var direction: int = 1
@@ -67,7 +68,8 @@ func _ready() -> void:
 	table_screen_y = screen_size.y - 180.0
 
 	_build_ui()
-	_start_game()
+	state = State.START
+	start_panel.visible = true
 
 
 # ─── UI construction ──────────────────────────────────────────────────────────
@@ -112,6 +114,50 @@ func _build_ui() -> void:
 	hint_label.position = Vector2(lane_center_x - 250, 70)
 	add_child(hint_label)
 
+	# ── Start / instructions overlay ──────────────────────────────────────────
+	start_panel = Control.new()
+	start_panel.set_anchors_preset(Control.PRESET_FULL_RECT)
+	start_panel.visible = false
+	add_child(start_panel)
+
+	var sp_bg := ColorRect.new()
+	sp_bg.color = Color(0, 0, 0, 0.72)
+	sp_bg.set_anchors_preset(Control.PRESET_FULL_RECT)
+	sp_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	start_panel.add_child(sp_bg)
+
+	var sp_box := VBoxContainer.new()
+	sp_box.alignment = BoxContainer.ALIGNMENT_CENTER
+	sp_box.add_theme_constant_override("separation", 18)
+	sp_box.position = Vector2(lane_center_x - 240, screen_size.y / 2.0 - 130)
+	sp_box.custom_minimum_size = Vector2(480, 0)
+	start_panel.add_child(sp_box)
+
+	var sp_title := Label.new()
+	sp_title.text = "Plate Stacker"
+	sp_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sp_title.add_theme_font_size_override("font_size", 60)
+	sp_box.add_child(sp_title)
+
+	var sp_sub := Label.new()
+	sp_sub.text = "Click or Space to start  •  Stack %d plates to win" % WIN_SCORE
+	sp_sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sp_sub.add_theme_font_size_override("font_size", 26)
+	sp_sub.modulate = Color(0.85, 0.85, 0.85)
+	sp_sub.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	sp_sub.custom_minimum_size = Vector2(480, 0)
+	sp_box.add_child(sp_sub)
+
+	var sp_how := Label.new()
+	sp_how.text = "A sliding plate swings back and forth above the stack.\nClick (or press Space) to drop it — try to line it up\nas closely as possible. Miss the stack and it's over."
+	sp_how.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sp_how.add_theme_font_size_override("font_size", 20)
+	sp_how.modulate = Color(0.65, 0.65, 0.65)
+	sp_how.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	sp_how.custom_minimum_size = Vector2(480, 0)
+	sp_box.add_child(sp_how)
+
+	# ── End overlay ────────────────────────────────────────────────────────────
 	end_panel = ColorRect.new()
 	end_panel.color = Color(0, 0, 0, 0.72)
 	end_panel.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -233,16 +279,22 @@ func _process(delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if state != State.MOVING:
-		return
-
 	var triggered := false
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_SPACE:
 		triggered = true
 	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		triggered = true
 
-	if triggered:
+	if not triggered:
+		return
+
+	if state == State.START:
+		start_panel.visible = false
+		_start_game()
+		get_viewport().set_input_as_handled()
+		return
+
+	if state == State.MOVING:
 		state = State.DROPPING
 		get_viewport().set_input_as_handled()
 
@@ -360,13 +412,14 @@ func _game_over() -> void:
 		moving_plate.queue_free()
 		moving_plate = null
 
-	end_label.text = "Game Over!\nPlates stacked: %d\nThe whole stack comes crashing down." % score
-	restart_button.visible = true
-	restart_button.text = "Try Again"
-	secondary_button.text = "Give Up"
+	end_label.text = "Stack toppled!\n%d plates high." % score
+	restart_button.visible = false
+	secondary_button.visible = false
 	end_panel.visible = true
 
 	emit_signal("game_finished", false, score)
+	await get_tree().create_timer(2.5).timeout
+	queue_free()
 
 
 func _win_game() -> void:
@@ -376,9 +429,9 @@ func _win_game() -> void:
 		moving_plate.queue_free()
 		moving_plate = null
 
-	end_label.text = "%d plates balanced without a wobble!\nIn the clatter, you slip the china\nright out of the case." % score
+	end_label.text = "%d plates balanced without a wobble!" % score
 	restart_button.visible = false
-	secondary_button.text = "Pocket It"
+	secondary_button.visible = false
 	end_panel.visible = true
 
 	var parent := get_parent()
@@ -386,6 +439,8 @@ func _win_game() -> void:
 		parent.passed = true
 
 	emit_signal("game_finished", true, score)
+	await get_tree().create_timer(2.5).timeout
+	queue_free()
 
 
 func _on_restart_pressed() -> void:

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://platform_minigame_1"]
+
+[ext_resource type="Script" path="res://Minigames/platformMinigame/platform_minigame.gd" id="1_platmg"]
+
+[node name="PlatformMinigame" type="CanvasLayer"]
+script = ExtResource("1_platmg")

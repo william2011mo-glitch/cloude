@@ -1,11 +1,24 @@
 [gd_scene format=3 uid="uid://dwyoucb5tupri"]
 
 [ext_resource type="Texture2D" uid="uid://c5u8tjkklgt8l" path="res://BW Museum Photos PNG/BW7ac Plate PR copy.png" id="1_bqfx8"]
+[ext_resource type="Script" uid="uid://dh0mgx8c26tfn" path="res://RoomScenes/upper_smaller_fancy_room_plate.gd" id="2_plate"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_plate"]
+radius = 101.0198
 
 [node name="UpperSmallerFancyRoomPlate" type="Node2D" unique_id=1234679964]
+script = ExtResource("2_plate")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1955444025]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_bqfx8")
 expand_mode = 3
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1234679965]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1234679966]
+position = Vector2(984, 659)
+shape = SubResource("CircleShape2D_plate")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
