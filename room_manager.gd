@@ -272,7 +272,8 @@ var rooms = {
 		"scene": "res://RoomScenes/upper_right_small_fancy_room_right.tscn",
 		"exits": {
 			"right": "Small_pot_right_2",
-			"back": "Small_room_turned_around"
+			"back": "Small_room_turned_around",
+			"different_vase": "Smaller_vase"
 		}
 	},
 	"Small_pot_right_2": {
@@ -301,7 +302,7 @@ var rooms = {
 	"Smaller_vase": {
 		"scene": "res://RoomScenes/upper_right_small_fancy_room_vase.tscn",
 		"exits": {
-			"back": "Small_room_turned_around"
+			"back": "Small_pot_room"
 		}
 	},
 	"Small_room_turned_around": {
