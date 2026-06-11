@@ -28,8 +28,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	guardTime+=delta;
-	if(guardTime-5>0):
-		guardTime-=5;
+	if(guardTime-20>0):
+		guardTime-=20;
 		guardMove();
 		print(guardRoom)
 	
