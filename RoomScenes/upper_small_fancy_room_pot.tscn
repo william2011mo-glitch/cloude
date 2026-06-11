@@ -24,11 +24,11 @@ offset_bottom = 1081.0
 texture = ExtResource("3_g2e54")
 expand_mode = 3
 
-[node name="Area2D" type="Area2D" parent="." unique_id=261809920]
+[node name="pot_pot" type="Area2D" parent="." unique_id=261809920]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1022279161]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pot_pot" unique_id=1022279161]
 position = Vector2(936, 619)
 scale = Vector2(1.5740516, 0.9440488)
 shape = SubResource("CapsuleShape2D_2aucn")
 
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="pot_pot" to="." method="_on_pot_pot_input_event"]
