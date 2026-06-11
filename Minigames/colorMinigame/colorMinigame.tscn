@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cgbklgxx1ngpl"]
+
+[ext_resource type="Script" uid="uid://bmp4l6wwn2h8a" path="res://Minigames/colorMinigame/color_minigame.gd" id="1_t1ln6"]
+
+[node name="colorMinigame" type="CanvasLayer" unique_id=1910429084]
+script = ExtResource("1_t1ln6")
