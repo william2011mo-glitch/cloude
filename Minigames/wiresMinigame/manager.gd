@@ -1,4 +1,5 @@
 extends Node2D
+signal game_finished(won:bool, score:int)
 
 const Wire = preload("res://Minigames/wiresMinigame/wire_1.tscn")
 var wires = []
@@ -27,4 +28,5 @@ func spawnWire(anchorPos: Vector2, startPosition: Vector2, targetPos: Vector2, w
 
 func end():
 	if(wires.all(func(w): return w.connected)):
+		emit_signal("game_finished", true, 0)
 		queue_free()
