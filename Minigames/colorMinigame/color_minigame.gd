@@ -49,6 +49,7 @@ const RESULT_R      := 30   # radius of result circle
 const PIE_R         := 90
 
 # ── State ──────────────────────────────────────────────────────────────────────
+signal game_finished(won: bool, score: int);
 var target_colors : Array  # 3 color keys, the answer
 var target_weights: Array  # 3 floats summing to 1.0
 
@@ -293,6 +294,7 @@ func _submit_guess() -> void:
 
 func _end_game() -> void:
 	await get_tree().create_timer(2.0).timeout
+	emit_signal("game_finished", true, 0)
 	queue_free();
 
 func _compute_feedback(guess: Array) -> Array:

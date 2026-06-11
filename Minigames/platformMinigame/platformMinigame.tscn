@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://platform_minigame_1"]
+[gd_scene format=3 uid="uid://bwpl47jxgbsu3"]
 
-[ext_resource type="Script" path="res://Minigames/platformMinigame/platform_minigame.gd" id="1_platmg"]
+[ext_resource type="Script" uid="uid://cuh3ugs64fs7t" path="res://Minigames/platformMinigame/platform_minigame.gd" id="1_platmg"]
 
-[node name="PlatformMinigame" type="CanvasLayer"]
+[node name="PlatformMinigame" type="CanvasLayer" unique_id=1832290838]
 script = ExtResource("1_platmg")

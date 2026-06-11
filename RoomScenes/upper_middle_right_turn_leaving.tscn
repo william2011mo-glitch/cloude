@@ -1,11 +1,20 @@
 [gd_scene format=3 uid="uid://clgeyh78pjeje"]
 
-[ext_resource type="Texture2D" uid="uid://d2xrcvgi6diab" path="res://BW Museum Photos PNG/BW4l Right door MR copy.png" id="1_bimme"]
+[ext_resource type="Texture2D" uid="uid://dday0wf4r8rqy" path="res://BW Museum Photos PNG/BW4l Right door MR copy.png" id="1_bimme"]
+[ext_resource type="Script" uid="uid://501f3yeywwnd" path="res://RoomScenes/upper_middle_right_turn_leaving.gd" id="1_n1ot1"]
 
 [node name="UpperMiddleRightTurnLeaving" type="Node2D" unique_id=122978093]
+script = ExtResource("1_n1ot1")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=713527482]
 offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("1_bimme")
 expand_mode = 3
+
+[node name="its_two_boys" type="Area2D" parent="." unique_id=371979183]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="its_two_boys" unique_id=1129851920]
+polygon = PackedVector2Array(1443, 538, 1584, 535, 1578, 704, 1437, 690)
+
+[connection signal="input_event" from="its_two_boys" to="." method="_on_its_two_boys_input_event"]

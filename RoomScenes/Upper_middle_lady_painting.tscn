@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qqmtdmi2p5dj"]
 
-[ext_resource type="Script" uid="uid://cv12prcttqd5k" path="res://RoomScenes/upper_middle_forward_final.gd" id="1_f3u4j"]
+[ext_resource type="Script" uid="uid://ejqduwcvwjt" path="res://RoomScenes/upper_middle_lady_painting.gd" id="1_f3u4j"]
 [ext_resource type="Texture2D" uid="uid://l0nytco3pmjk" path="res://BW Museum Photos PNG/BW4c The painting of a woman copy.png" id="2_f3u4j"]
 
 [node name="UpperMiddleForwardFinal" type="Node2D" unique_id=276004491]
@@ -11,3 +11,10 @@ offset_right = 1919.0
 offset_bottom = 1081.0
 texture = ExtResource("2_f3u4j")
 expand_mode = 3
+
+[node name="lady_is_painting" type="Area2D" parent="." unique_id=1895965007]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lady_is_painting" unique_id=1761625288]
+polygon = PackedVector2Array(675, 189, 1113, 83, 1150, 996, 632, 934)
+
+[connection signal="input_event" from="lady_is_painting" to="." method="_on_lady_is_painting_input_event"]

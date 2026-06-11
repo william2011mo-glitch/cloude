@@ -18,4 +18,10 @@ expand_mode = 3
 position = Vector2(681, 612)
 polygon = PackedVector2Array(-52, -42, 72, -41, 94, 130, -27, 148)
 
+[node name="yea_this_is_a_painting" type="Area2D" parent="." unique_id=67695417]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="yea_this_is_a_painting" unique_id=1730499524]
+polygon = PackedVector2Array(1682, 158, 1919, 35, 1920, 636, 1696, 627)
+
 [connection signal="input_event" from="two_boys_painting" to="." method="_on_two_boys_input_event"]
+[connection signal="input_event" from="yea_this_is_a_painting" to="." method="_on_yea_this_is_a_painting_input_event"]

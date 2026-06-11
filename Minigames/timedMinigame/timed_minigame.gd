@@ -1,5 +1,5 @@
 extends CanvasLayer
-
+signal game_finished(won:bool, score:int);
 @onready var background : ColorRect = $Control/Background
 @onready var time1 : ColorRect = $Control/Time1
 @onready var time2 : ColorRect = $Control/Time2
@@ -107,10 +107,12 @@ func _input(event: InputEvent) -> void:
 		if not _hit_zone2:
 			time2.color = COLOR_ZONE_MISS
 		_active = false
+		
 		queue_free()
 		return
 	if _hit_zone1 and _hit_zone2:
 		_active = false
+		emit_signal("game_finished", true, 0);
 		queue_free()
 
 
